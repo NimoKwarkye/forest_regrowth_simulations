@@ -27,3 +27,12 @@ dist/
 /guess
 /build/
 /build_new/
+
+# User-supplied cluster scripts stay local; retain the tool-owned MPI wrapper.
+setup_guess.sh
+setup_run_owl_with_scratch_lpj_work.sh
+mpi_run_guess_on_tmp.sh
+finishup.sh
+append_files.sh
+append_runfiles.sh
+!templates/mpi_run_guess_on_tmp.sh
