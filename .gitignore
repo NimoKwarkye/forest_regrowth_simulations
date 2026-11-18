@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.deps/
+local-study/
+test-results/
+study-workspace/
+dist/
+
+.geo/

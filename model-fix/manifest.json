@@ -1,0 +1,14 @@
+{
+  "cfxinput.cpp": {
+    "original_sha256_lf": "d9b3e3373d7609516f1b9eee6944be75f88a288232e1e1c3937639b91d344936",
+    "modified_sha256_lf": "451b7c7d36b83dafb0d3299d418856362bd0ced74b981f7ec50e0de625ed6838"
+  },
+  "cfxinput.h": {
+    "original_sha256_lf": "1ad5060d64a21f3853d656c765064723d59973e27a77b9419367ce5558defd93",
+    "modified_sha256_lf": "2975cab73c9a0b044c61f51406c8ee19f8dcd11a00ddf96e732f1d8eb887816d"
+  },
+  "globalco2file.h": {
+    "original_sha256_lf": "3aff912c8902054d859252ea52714a6a07ee11a5461a368f83f480e170c0698e",
+    "modified_sha256_lf": "ab5bcd60fbf30de1bce5c887a7564518d2529568a149da48cfcb82cf0810df1e"
+  }
+}

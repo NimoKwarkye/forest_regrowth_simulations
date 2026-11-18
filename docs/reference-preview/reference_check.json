@@ -1,0 +1,23 @@
+{
+  "archive": "F:\\post_doc\\guess_model\\test_2\\output-2026-10-13",
+  "records": 120,
+  "sites": [
+    [
+      115.75,
+      51.75
+    ]
+  ],
+  "years": [
+    1901.0,
+    2020.0
+  ],
+  "woody_PFT_sum_in_cut_years": {
+    "1905": [
+      0.0
+    ],
+    "1965": [
+      0.0
+    ]
+  },
+  "limitation": "Existing archived output only. Does not establish executable provenance or validate new single-cut runs."
+}

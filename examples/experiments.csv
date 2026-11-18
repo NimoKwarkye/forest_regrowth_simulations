@@ -1,0 +1,6 @@
+id,densities,reestab,twig_removal
+baseline,2000,NONE,0.4
+density_low,1000,NONE,0.4
+density_high,3000,NONE,0.4
+recruitment_all,2000,ALL,0.4
+twig_retained,2000,NONE,0.0

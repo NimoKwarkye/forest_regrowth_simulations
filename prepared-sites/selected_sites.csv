@@ -1,0 +1,301 @@
+zone,longitude,latitude,forest_fraction,reference_year,climate_stratum
+amazon,-69.25,-6.75,0.9987999999999999,2000,Humid tropical Amazon
+amazon,-69.25,-6.25,1.0,2000,Humid tropical Amazon
+amazon,-69.25,-5.75,1.0,2000,Humid tropical Amazon
+amazon,-69.25,-5.25,1.0,2000,Humid tropical Amazon
+amazon,-69.25,-4.75,1.0,2000,Humid tropical Amazon
+amazon,-68.75,-6.75,1.0,2000,Humid tropical Amazon
+amazon,-68.75,-6.25,0.9988,2000,Humid tropical Amazon
+amazon,-68.75,-5.75,1.0,2000,Humid tropical Amazon
+amazon,-68.75,-5.25,1.0,2000,Humid tropical Amazon
+amazon,-68.75,-4.75,1.0,2000,Humid tropical Amazon
+amazon,-68.25,-6.75,1.0,2000,Humid tropical Amazon
+amazon,-68.25,-6.25,0.9988,2000,Humid tropical Amazon
+amazon,-68.25,-5.75,1.0,2000,Humid tropical Amazon
+amazon,-68.25,-5.25,1.0,2000,Humid tropical Amazon
+amazon,-68.25,-4.75,1.0,2000,Humid tropical Amazon
+amazon,-67.75,-6.75,1.0,2000,Humid tropical Amazon
+amazon,-67.75,-6.25,0.9992,2000,Humid tropical Amazon
+amazon,-67.75,-5.75,1.0,2000,Humid tropical Amazon
+amazon,-67.75,-5.25,1.0,2000,Humid tropical Amazon
+amazon,-67.75,-4.75,1.0,2000,Humid tropical Amazon
+amazon,-67.25,-6.75,1.0,2000,Humid tropical Amazon
+amazon,-67.25,-6.25,1.0,2000,Humid tropical Amazon
+amazon,-67.25,-5.75,1.0,2000,Humid tropical Amazon
+amazon,-67.25,-5.25,0.9996000000000002,2000,Humid tropical Amazon
+amazon,-67.25,-4.75,1.0,2000,Humid tropical Amazon
+amazon,-66.75,-6.75,1.0,2000,Humid tropical Amazon
+amazon,-66.75,-6.25,1.0,2000,Humid tropical Amazon
+amazon,-66.75,-5.75,1.0,2000,Humid tropical Amazon
+amazon,-66.75,-5.25,1.0,2000,Humid tropical Amazon
+amazon,-66.75,-4.75,0.9955999999999999,2000,Humid tropical Amazon
+amazon,-66.25,-6.75,1.0,2000,Humid tropical Amazon
+amazon,-66.25,-6.25,1.0,2000,Humid tropical Amazon
+amazon,-66.25,-5.75,1.0,2000,Humid tropical Amazon
+amazon,-66.25,-5.25,1.0,2000,Humid tropical Amazon
+amazon,-66.25,-4.75,1.0,2000,Humid tropical Amazon
+amazon,-65.75,-6.75,1.0,2000,Humid tropical Amazon
+amazon,-65.75,-6.25,1.0,2000,Humid tropical Amazon
+amazon,-65.75,-5.75,1.0,2000,Humid tropical Amazon
+amazon,-65.75,-5.25,1.0,2000,Humid tropical Amazon
+amazon,-65.75,-4.75,1.0,2000,Humid tropical Amazon
+amazon,-65.25,-6.75,1.0,2000,Humid tropical Amazon
+amazon,-65.25,-6.25,1.0,2000,Humid tropical Amazon
+amazon,-65.25,-5.75,1.0,2000,Humid tropical Amazon
+amazon,-65.25,-5.25,1.0,2000,Humid tropical Amazon
+amazon,-65.25,-4.75,1.0,2000,Humid tropical Amazon
+amazon,-64.75,-6.75,0.9984000000000001,2000,Humid tropical Amazon
+amazon,-64.75,-6.25,1.0,2000,Humid tropical Amazon
+amazon,-64.75,-5.75,0.9984000000000001,2000,Humid tropical Amazon
+amazon,-64.75,-5.25,1.0,2000,Humid tropical Amazon
+amazon,-64.75,-4.75,1.0,2000,Humid tropical Amazon
+se_us,-89.75,31.75,0.9563999999999999,2000,Humid subtropical southeastern USA
+se_us,-89.75,32.25,0.9488000000000001,2000,Humid subtropical southeastern USA
+se_us,-89.75,32.75,0.9328000000000001,2000,Humid subtropical southeastern USA
+se_us,-89.75,33.25,0.9408000000000001,2000,Humid subtropical southeastern USA
+se_us,-89.75,33.75,0.8596000000000001,2000,Humid subtropical southeastern USA
+se_us,-89.25,31.75,0.9776000000000001,2000,Humid subtropical southeastern USA
+se_us,-89.25,32.25,0.9648,2000,Humid subtropical southeastern USA
+se_us,-89.25,32.75,0.9716,2000,Humid subtropical southeastern USA
+se_us,-89.25,33.25,0.9892000000000001,2000,Humid subtropical southeastern USA
+se_us,-89.25,33.75,0.828,2000,Humid subtropical southeastern USA
+se_us,-88.75,31.75,0.9803999999999999,2000,Humid subtropical southeastern USA
+se_us,-88.75,32.25,0.9832,2000,Humid subtropical southeastern USA
+se_us,-88.75,32.75,0.9700000000000001,2000,Humid subtropical southeastern USA
+se_us,-88.75,33.25,0.7372,2000,Humid subtropical southeastern USA
+se_us,-88.75,33.75,0.6016000000000001,2000,Humid subtropical southeastern USA
+se_us,-88.25,31.75,0.9972,2000,Humid subtropical southeastern USA
+se_us,-88.25,32.25,0.9964000000000001,2000,Humid subtropical southeastern USA
+se_us,-88.25,32.75,0.8555999999999999,2000,Humid subtropical southeastern USA
+se_us,-88.25,33.25,0.7724000000000001,2000,Humid subtropical southeastern USA
+se_us,-88.25,33.75,0.9344,2000,Humid subtropical southeastern USA
+se_us,-87.75,31.75,0.9984000000000001,2000,Humid subtropical southeastern USA
+se_us,-87.75,32.25,0.8575999999999999,2000,Humid subtropical southeastern USA
+se_us,-87.75,32.75,0.7772,2000,Humid subtropical southeastern USA
+se_us,-87.75,33.25,0.9463999999999999,2000,Humid subtropical southeastern USA
+se_us,-87.75,33.75,0.9872,2000,Humid subtropical southeastern USA
+se_us,-87.25,31.75,0.9916000000000001,2000,Humid subtropical southeastern USA
+se_us,-87.25,32.25,0.8468,2000,Humid subtropical southeastern USA
+se_us,-87.25,32.75,0.9260000000000002,2000,Humid subtropical southeastern USA
+se_us,-87.25,33.25,0.9860000000000001,2000,Humid subtropical southeastern USA
+se_us,-87.25,33.75,0.9664,2000,Humid subtropical southeastern USA
+se_us,-86.75,31.75,0.9876000000000001,2000,Humid subtropical southeastern USA
+se_us,-86.75,32.25,0.8344,2000,Humid subtropical southeastern USA
+se_us,-86.75,32.75,0.9328000000000001,2000,Humid subtropical southeastern USA
+se_us,-86.75,33.25,0.9260000000000002,2000,Humid subtropical southeastern USA
+se_us,-86.75,33.75,0.9244000000000001,2000,Humid subtropical southeastern USA
+se_us,-86.25,31.75,0.9596,2000,Humid subtropical southeastern USA
+se_us,-86.25,32.25,0.6832000000000001,2000,Humid subtropical southeastern USA
+se_us,-86.25,32.75,0.928,2000,Humid subtropical southeastern USA
+se_us,-86.25,33.25,0.8943999999999999,2000,Humid subtropical southeastern USA
+se_us,-86.25,33.75,0.8675999999999999,2000,Humid subtropical southeastern USA
+se_us,-85.75,31.75,0.9415999999999999,2000,Humid subtropical southeastern USA
+se_us,-85.75,32.25,0.9115999999999999,2000,Humid subtropical southeastern USA
+se_us,-85.75,32.75,0.9083999999999999,2000,Humid subtropical southeastern USA
+se_us,-85.75,33.25,0.9692000000000001,2000,Humid subtropical southeastern USA
+se_us,-85.75,33.75,0.904,2000,Humid subtropical southeastern USA
+se_us,-85.25,31.75,0.9064,2000,Humid subtropical southeastern USA
+se_us,-85.25,32.25,0.97,2000,Humid subtropical southeastern USA
+se_us,-85.25,32.75,0.9563999999999999,2000,Humid subtropical southeastern USA
+se_us,-85.25,33.25,0.9308000000000001,2000,Humid subtropical southeastern USA
+se_us,-85.25,33.75,0.9607999999999999,2000,Humid subtropical southeastern USA
+central_europe,11.25,45.25,0.4583999999999999,2000,Temperate central Europe
+central_europe,11.25,45.75,0.5988,2000,Temperate central Europe
+central_europe,11.25,46.25,0.7631999999999999,2000,Temperate central Europe
+central_europe,11.25,46.75,0.46640000000000004,2000,Temperate central Europe
+central_europe,11.25,47.25,0.4256,2000,Temperate central Europe
+central_europe,11.25,47.75,0.5476000000000001,2000,Temperate central Europe
+central_europe,11.75,45.25,0.7964000000000002,2000,Temperate central Europe
+central_europe,11.75,45.75,0.5768,2000,Temperate central Europe
+central_europe,11.75,46.25,0.6180000000000001,2000,Temperate central Europe
+central_europe,11.75,46.75,0.5192000000000001,2000,Temperate central Europe
+central_europe,11.75,47.25,0.39760000000000006,2000,Temperate central Europe
+central_europe,11.75,47.75,0.6467999999999998,2000,Temperate central Europe
+central_europe,12.25,45.25,0.3048,2000,Temperate central Europe
+central_europe,12.25,45.75,0.5356,2000,Temperate central Europe
+central_europe,12.25,46.25,0.6144000000000001,2000,Temperate central Europe
+central_europe,12.25,46.75,0.40280000000000005,2000,Temperate central Europe
+central_europe,12.25,47.25,0.3124,2000,Temperate central Europe
+central_europe,12.25,47.75,0.5228,2000,Temperate central Europe
+central_europe,12.75,45.75,0.5352,2000,Temperate central Europe
+central_europe,12.75,46.25,0.5552,2000,Temperate central Europe
+central_europe,12.75,46.75,0.5736,2000,Temperate central Europe
+central_europe,12.75,47.25,0.3616,2000,Temperate central Europe
+central_europe,12.75,47.75,0.5676,2000,Temperate central Europe
+central_europe,13.25,46.25,0.5088,2000,Temperate central Europe
+central_europe,13.25,46.75,0.6356,2000,Temperate central Europe
+central_europe,13.25,47.25,0.472,2000,Temperate central Europe
+central_europe,13.25,47.75,0.4972,2000,Temperate central Europe
+central_europe,13.75,45.75,0.48760000000000003,2000,Temperate central Europe
+central_europe,13.75,46.25,0.7516,2000,Temperate central Europe
+central_europe,13.75,46.75,0.6867999999999999,2000,Temperate central Europe
+central_europe,13.75,47.25,0.5392000000000001,2000,Temperate central Europe
+central_europe,13.75,47.75,0.5996,2000,Temperate central Europe
+central_europe,14.25,45.25,0.46,2000,Temperate central Europe
+central_europe,14.25,45.75,0.7696000000000001,2000,Temperate central Europe
+central_europe,14.25,46.25,0.7544000000000001,2000,Temperate central Europe
+central_europe,14.25,46.75,0.6672,2000,Temperate central Europe
+central_europe,14.25,47.25,0.6363999999999999,2000,Temperate central Europe
+central_europe,14.25,47.75,0.6436000000000001,2000,Temperate central Europe
+central_europe,14.75,45.25,0.6644000000000001,2000,Temperate central Europe
+central_europe,14.75,45.75,0.7632,2000,Temperate central Europe
+central_europe,14.75,46.25,0.7544000000000002,2000,Temperate central Europe
+central_europe,14.75,46.75,0.7047999999999999,2000,Temperate central Europe
+central_europe,14.75,47.25,0.7012000000000002,2000,Temperate central Europe
+central_europe,14.75,47.75,0.7831999999999999,2000,Temperate central Europe
+central_europe,15.25,45.25,0.764,2000,Temperate central Europe
+central_europe,15.25,45.75,0.656,2000,Temperate central Europe
+central_europe,15.25,46.25,0.5684000000000002,2000,Temperate central Europe
+central_europe,15.25,46.75,0.7408,2000,Temperate central Europe
+central_europe,15.25,47.25,0.8008,2000,Temperate central Europe
+central_europe,15.25,47.75,0.8603999999999999,2000,Temperate central Europe
+scandinavia,14.75,59.75,0.9007999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,14.75,60.25,0.962,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,14.75,60.75,0.7616,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,14.75,61.25,0.8996000000000001,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,14.75,61.75,0.9388000000000001,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,14.75,62.25,0.9260000000000002,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,14.75,62.75,0.8732,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,14.75,63.25,0.8156,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,14.75,63.75,0.8747999999999998,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,14.75,64.25,0.7051999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.25,59.75,0.8792,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.25,60.25,0.8824000000000001,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.25,60.75,0.8796,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.25,61.25,0.9496000000000001,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.25,61.75,0.9356,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.25,62.25,0.9048000000000002,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.25,62.75,0.8847999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.25,63.25,0.9323999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.25,63.75,0.8180000000000001,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.25,64.25,0.8736,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.75,59.75,0.8500000000000002,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.75,60.25,0.754,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.75,60.75,0.85,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.75,61.25,0.8791999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.75,61.75,0.9451999999999998,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.75,62.25,0.9563999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.75,62.75,0.9560000000000001,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.75,63.25,0.9632,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.75,63.75,0.8707999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,15.75,64.25,0.7988,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.25,59.75,0.6503999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.25,60.25,0.7992000000000001,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.25,60.75,0.9504,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.25,61.25,0.8864,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.25,61.75,0.8879999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.25,62.25,0.9576,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.25,62.75,0.9303999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.25,63.25,0.958,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.25,63.75,0.9116,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.25,64.25,0.8648,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.75,59.75,0.4304,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.75,60.25,0.8231999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.75,60.75,0.814,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.75,61.25,0.8371999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.75,61.75,0.8224,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.75,62.25,0.9528,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.75,62.75,0.9392,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.75,63.25,0.966,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.75,63.75,0.9475999999999999,2000,Boreal northern Europe (Fennoscandia)
+scandinavia,16.75,64.25,0.8351999999999998,2000,Boreal northern Europe (Fennoscandia)
+iberia,-8.25,41.75,0.5964,2000,Mediterranean and transitional Iberia
+iberia,-8.25,42.25,0.7879999999999998,2000,Mediterranean and transitional Iberia
+iberia,-8.25,42.75,0.8571999999999999,2000,Mediterranean and transitional Iberia
+iberia,-7.75,41.75,0.4576,2000,Mediterranean and transitional Iberia
+iberia,-7.75,42.25,0.8164,2000,Mediterranean and transitional Iberia
+iberia,-7.75,42.75,0.6884,2000,Mediterranean and transitional Iberia
+iberia,-7.25,41.75,0.5404000000000001,2000,Mediterranean and transitional Iberia
+iberia,-7.25,42.25,0.8212,2000,Mediterranean and transitional Iberia
+iberia,-7.25,42.75,0.9176000000000002,2000,Mediterranean and transitional Iberia
+iberia,-6.75,41.75,0.5531999999999999,2000,Mediterranean and transitional Iberia
+iberia,-6.75,42.25,0.7592000000000001,2000,Mediterranean and transitional Iberia
+iberia,-6.75,42.75,0.9048,2000,Mediterranean and transitional Iberia
+iberia,-6.25,41.75,0.39359999999999995,2000,Mediterranean and transitional Iberia
+iberia,-6.25,42.25,0.5988,2000,Mediterranean and transitional Iberia
+iberia,-6.25,42.75,0.77,2000,Mediterranean and transitional Iberia
+iberia,-5.75,42.75,0.4072,2000,Mediterranean and transitional Iberia
+iberia,-5.25,42.75,0.5924,2000,Mediterranean and transitional Iberia
+iberia,-4.75,42.75,0.6407999999999999,2000,Mediterranean and transitional Iberia
+iberia,-4.25,42.75,0.34759999999999996,2000,Mediterranean and transitional Iberia
+iberia,-3.75,42.75,0.42800000000000005,2000,Mediterranean and transitional Iberia
+iberia,-3.25,41.75,0.5356000000000001,2000,Mediterranean and transitional Iberia
+iberia,-3.25,42.25,0.6988,2000,Mediterranean and transitional Iberia
+iberia,-3.25,42.75,0.4915999999999999,2000,Mediterranean and transitional Iberia
+iberia,-2.75,41.75,0.7327999999999999,2000,Mediterranean and transitional Iberia
+iberia,-2.75,42.25,0.8204,2000,Mediterranean and transitional Iberia
+iberia,-2.75,42.75,0.5980000000000001,2000,Mediterranean and transitional Iberia
+iberia,-2.25,42.25,0.3348,2000,Mediterranean and transitional Iberia
+iberia,-2.25,42.75,0.6212,2000,Mediterranean and transitional Iberia
+iberia,-1.75,42.75,0.44519999999999993,2000,Mediterranean and transitional Iberia
+iberia,-1.25,42.75,0.712,2000,Mediterranean and transitional Iberia
+iberia,-0.75,42.25,0.5007999999999999,2000,Mediterranean and transitional Iberia
+iberia,-0.75,42.75,0.6883999999999999,2000,Mediterranean and transitional Iberia
+iberia,-0.25,42.25,0.5076,2000,Mediterranean and transitional Iberia
+iberia,-0.25,42.75,0.41400000000000003,2000,Mediterranean and transitional Iberia
+iberia,0.25,42.25,0.7315999999999999,2000,Mediterranean and transitional Iberia
+iberia,0.25,42.75,0.43999999999999995,2000,Mediterranean and transitional Iberia
+iberia,0.75,42.25,0.6248,2000,Mediterranean and transitional Iberia
+iberia,0.75,42.75,0.5688,2000,Mediterranean and transitional Iberia
+iberia,1.25,41.75,0.4596,2000,Mediterranean and transitional Iberia
+iberia,1.25,42.25,0.8552,2000,Mediterranean and transitional Iberia
+iberia,1.25,42.75,0.6308,2000,Mediterranean and transitional Iberia
+iberia,1.75,41.75,0.7828,2000,Mediterranean and transitional Iberia
+iberia,1.75,42.25,0.7536,2000,Mediterranean and transitional Iberia
+iberia,1.75,42.75,0.5372,2000,Mediterranean and transitional Iberia
+iberia,2.25,41.75,0.7835999999999999,2000,Mediterranean and transitional Iberia
+iberia,2.25,42.25,0.8119999999999998,2000,Mediterranean and transitional Iberia
+iberia,2.25,42.75,0.7752,2000,Mediterranean and transitional Iberia
+iberia,2.75,41.75,0.6208,2000,Mediterranean and transitional Iberia
+iberia,2.75,42.25,0.9232,2000,Mediterranean and transitional Iberia
+iberia,2.75,42.75,0.3807999999999999,2000,Mediterranean and transitional Iberia
+southern_chile,-73.75,-44.25,0.3704,2000,Cool oceanic southern Chile
+southern_chile,-73.75,-43.25,0.5292000000000001,2000,Cool oceanic southern Chile
+southern_chile,-73.75,-42.75,0.6679999999999999,2000,Cool oceanic southern Chile
+southern_chile,-73.75,-42.25,0.8192000000000002,2000,Cool oceanic southern Chile
+southern_chile,-73.75,-41.75,0.334,2000,Cool oceanic southern Chile
+southern_chile,-73.75,-41.25,0.6068,2000,Cool oceanic southern Chile
+southern_chile,-73.75,-40.75,0.6352,2000,Cool oceanic southern Chile
+southern_chile,-73.75,-40.25,0.4284,2000,Cool oceanic southern Chile
+southern_chile,-73.25,-44.25,0.36000000000000004,2000,Cool oceanic southern Chile
+southern_chile,-73.25,-41.75,0.33799999999999997,2000,Cool oceanic southern Chile
+southern_chile,-73.25,-40.25,0.7143999999999999,2000,Cool oceanic southern Chile
+southern_chile,-73.25,-39.75,0.5908,2000,Cool oceanic southern Chile
+southern_chile,-73.25,-39.25,0.3112,2000,Cool oceanic southern Chile
+southern_chile,-73.25,-38.75,0.5256000000000001,2000,Cool oceanic southern Chile
+southern_chile,-73.25,-38.25,0.8448,2000,Cool oceanic southern Chile
+southern_chile,-72.75,-44.25,0.7964000000000001,2000,Cool oceanic southern Chile
+southern_chile,-72.75,-43.75,0.7796000000000001,2000,Cool oceanic southern Chile
+southern_chile,-72.75,-43.25,0.672,2000,Cool oceanic southern Chile
+southern_chile,-72.75,-42.75,0.5327999999999999,2000,Cool oceanic southern Chile
+southern_chile,-72.75,-41.75,0.45480000000000004,2000,Cool oceanic southern Chile
+southern_chile,-72.75,-41.25,0.4636,2000,Cool oceanic southern Chile
+southern_chile,-72.75,-39.75,0.7340000000000001,2000,Cool oceanic southern Chile
+southern_chile,-72.75,-39.25,0.7043999999999999,2000,Cool oceanic southern Chile
+southern_chile,-72.75,-38.75,0.334,2000,Cool oceanic southern Chile
+southern_chile,-72.75,-38.25,0.4488,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-44.25,0.6564,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-43.75,0.7128,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-43.25,0.6651999999999999,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-42.75,0.6912,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-42.25,0.48439999999999994,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-41.75,0.7512000000000001,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-41.25,0.8064,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-40.75,0.676,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-40.25,0.716,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-39.75,0.6508,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-39.25,0.43520000000000003,2000,Cool oceanic southern Chile
+southern_chile,-72.25,-38.25,0.3784,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-44.25,0.5992,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-43.75,0.6395999999999998,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-43.25,0.6628,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-42.75,0.6524,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-42.25,0.6284000000000001,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-41.75,0.8148000000000002,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-41.25,0.7232000000000001,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-40.75,0.6264,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-40.25,0.864,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-39.75,0.8652000000000002,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-39.25,0.8544,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-38.75,0.7536000000000002,2000,Cool oceanic southern Chile
+southern_chile,-71.75,-38.25,0.7887999999999998,2000,Cool oceanic southern Chile

@@ -1,0 +1,12 @@
+{
+  "climate_recycle_from_year": 1905,
+  "extend_climate": 0,
+  "extend_climate_nyears": 1,
+  "extend_climate_startyear": 1901,
+  "fixed_co2": 0,
+  "fixed_co2_from_year": 1905,
+  "fixed_co2_year": 1901,
+  "fixed_spinup_climate": 0,
+  "restart": 0,
+  "save_state": 0
+}

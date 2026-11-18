@@ -1,0 +1,205 @@
+{
+  "boundary_held_records": 30300,
+  "climate_basis": "Broad geographic climate strata; not per-pixel Koppen classification. See site_preparation.zones.",
+  "landuse_files": {
+    "controlled_regrowth": "landuse_forest1.txt",
+    "landuse_change": "landuse_dynamic.txt"
+  },
+  "minimum_forest_fraction": 0.3,
+  "minimum_points_per_zone": 50,
+  "outside_source_years": "hold_boundary",
+  "rectangle_shape": [
+    3,
+    3
+  ],
+  "rectangle_shapes": {
+    "amazon": [
+      5,
+      10
+    ],
+    "central_europe": [
+      6,
+      9
+    ],
+    "iberia": [
+      3,
+      23
+    ],
+    "scandinavia": [
+      10,
+      5
+    ],
+    "se_us": [
+      5,
+      10
+    ],
+    "southern_chile": [
+      13,
+      5
+    ]
+  },
+  "rectangles": {
+    "amazon": {
+      "columns": 10,
+      "latitude": [
+        -7.0,
+        -4.5
+      ],
+      "longitude": [
+        -69.5,
+        -64.5
+      ],
+      "mean_forest_fraction": 0.9997519999999999,
+      "minimum_forest_fraction": 0.9955999999999999,
+      "rectangle_slots": 50,
+      "rows": 5,
+      "selected_points": 50,
+      "unselected_slots": 0
+    },
+    "central_europe": {
+      "columns": 9,
+      "latitude": [
+        45.0,
+        48.0
+      ],
+      "longitude": [
+        11.0,
+        15.5
+      ],
+      "mean_forest_fraction": 0.59944,
+      "minimum_forest_fraction": 0.3048,
+      "rectangle_slots": 54,
+      "rows": 6,
+      "selected_points": 50,
+      "unselected_slots": 4
+    },
+    "iberia": {
+      "columns": 23,
+      "latitude": [
+        41.5,
+        43.0
+      ],
+      "longitude": [
+        -8.5,
+        3.0
+      ],
+      "mean_forest_fraction": 0.6332000000000001,
+      "minimum_forest_fraction": 0.3348,
+      "rectangle_slots": 69,
+      "rows": 3,
+      "selected_points": 50,
+      "unselected_slots": 19
+    },
+    "scandinavia": {
+      "columns": 5,
+      "latitude": [
+        59.5,
+        64.5
+      ],
+      "longitude": [
+        14.5,
+        17.0
+      ],
+      "mean_forest_fraction": 0.8717200000000002,
+      "minimum_forest_fraction": 0.4304,
+      "rectangle_slots": 50,
+      "rows": 10,
+      "selected_points": 50,
+      "unselected_slots": 0
+    },
+    "se_us": {
+      "columns": 10,
+      "latitude": [
+        31.5,
+        34.0
+      ],
+      "longitude": [
+        -90.0,
+        -85.0
+      ],
+      "mean_forest_fraction": 0.9155760000000002,
+      "minimum_forest_fraction": 0.6016000000000001,
+      "rectangle_slots": 50,
+      "rows": 5,
+      "selected_points": 50,
+      "unselected_slots": 0
+    },
+    "southern_chile": {
+      "columns": 5,
+      "latitude": [
+        -44.5,
+        -38.0
+      ],
+      "longitude": [
+        -74.0,
+        -71.5
+      ],
+      "mean_forest_fraction": 0.621864,
+      "minimum_forest_fraction": 0.3112,
+      "rectangle_slots": 65,
+      "rows": 13,
+      "selected_points": 50,
+      "unselected_slots": 15
+    }
+  },
+  "reference_year": 2000,
+  "selected_points": 300,
+  "selection_method": "Smallest grid-cell footprint meeting minimum point count; prefer compact aspect ratio, then highest mean forest fraction; include every eligible point within the chosen rectangle",
+  "selection_mode": "rectangle_minimum_points",
+  "shortfalls": {},
+  "simulation_years": [
+    1901,
+    2121
+  ],
+  "source_grid_sha256": "7ae6b1518f20f8ed6f8e08c52f9c6fa0f48ae2b73c1688935ad078a20f7f3123",
+  "source_gridlist": "F:\\post_doc\\guess_model\\gridlist_hurtt_RNDM_midpoint_S0_state_ok.txt",
+  "source_landuse": "F:\\post_doc\\guess_model\\net_lu_hilda_global.txt",
+  "source_landuse_mtime_ns": 1785932927000000000,
+  "source_landuse_size": 1035221681,
+  "source_years": [
+    1800,
+    2020
+  ],
+  "written_years": [
+    1800,
+    2121
+  ],
+  "zones": {
+    "amazon": {
+      "above_threshold": 797,
+      "in_gridlist": 799,
+      "selected": 50,
+      "with_reference_landuse": 799
+    },
+    "central_europe": {
+      "above_threshold": 272,
+      "in_gridlist": 418,
+      "selected": 50,
+      "with_reference_landuse": 418
+    },
+    "iberia": {
+      "above_threshold": 145,
+      "in_gridlist": 256,
+      "selected": 50,
+      "with_reference_landuse": 256
+    },
+    "scandinavia": {
+      "above_threshold": 500,
+      "in_gridlist": 557,
+      "selected": 50,
+      "with_reference_landuse": 557
+    },
+    "se_us": {
+      "above_threshold": 264,
+      "in_gridlist": 276,
+      "selected": 50,
+      "with_reference_landuse": 276
+    },
+    "southern_chile": {
+      "above_threshold": 63,
+      "in_gridlist": 107,
+      "selected": 50,
+      "with_reference_landuse": 107
+    }
+  }
+}

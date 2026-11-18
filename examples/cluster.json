@@ -1,0 +1,24 @@
+{
+  "executable": "/bg/home/kwarkye-n/eu_applications/svn_eu/european_applications/build_new/guess",
+  "python": "/bg/home/kwarkye-n/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12",
+  "partition": "CHANGE_ME",
+  "finish_partition": "CHANGE_ME",
+  "nodes": 1,
+  "processes_per_node": 1,
+  "finish_tasks": 1,
+  "max_active": 5,
+  "walltime": "3-00:00:00",
+  "finish_walltime": "1-00:00:00",
+  "account": null,
+  "qos": null,
+  "memory": null,
+  "environment": [],
+  "data_prefix": "/bg/data/lpj",
+  "work_prefix": "/bg/data/lpj/work",
+  "reference_helpers": {
+    "setup": "/bg/data/lpj/scripts/setup_run_owl_with_scratch_lpj_work.sh",
+    "scratch": "mpi_run_guess_on_tmp.sh",
+    "finish": "finishup_lpj_work_owl.sh",
+    "append": "append_files.sh"
+  }
+}

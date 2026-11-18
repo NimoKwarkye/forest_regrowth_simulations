@@ -1,0 +1,585 @@
+{
+  "cluster": "cluster.json",
+  "ins_directory": "/bg/data/lpj/kwarkye-n/simulations/eu_to_global/forest_regrowth/test_2",
+  "main_ins": "guess.ins",
+  "gridlist": "/absolute/path/to/test_2/gridlist.txt",
+  "model_source": "/bg/home/kwarkye-n/eu_applications/svn_eu/european_applications",
+  "experiments": "scenario-management.csv",
+  "input_module": "cfx",
+  "stand": "Forest",
+  "management": "Forest_management",
+  "selection": [
+    "TrBE",
+    "TrIBE"
+  ],
+  "selection_note": "Example tropical PFTs; select appropriate PFTs and density vectors for your sites.",
+  "baseline": "baseline",
+  "cut_year": 2001,
+  "first_year": 1901,
+  "last_year": 2121,
+  "killgrass_at_cc": 0,
+  "disturbance_audit_confirmed": true,
+  "landcover_audit_confirmed": true,
+  "executable_compatibility_confirmed": true,
+  "biomass": {
+    "kind": "dry_mass",
+    "definition_reviewed": true,
+    "definition": "REVIEW REQUIRED: verify file_agb_gridcell formula and carbon units against the deployed executable. Selected woody PFT columns exclude grasses.",
+    "carbon_fraction": 0.5,
+    "output_unit": "kg dry matter m-2"
+  },
+  "validation": {
+    "harvest_tolerance": 1e-08,
+    "fatal_log_patterns": [
+      "\\bFATAL\\b",
+      "mass balance error"
+    ]
+  },
+  "analysis": {
+    "grid_resolution_degrees": [
+      0.5,
+      0.5
+    ],
+    "plot_max_sites": 10,
+    "summary_ages": [
+      0,
+      20,
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "plot_colormap": "jet"
+  },
+  "outputs": [
+    {
+      "variable": "aboveground_carbon",
+      "keyword": "file_agb_gridcell",
+      "file": "agb_gridcell.out",
+      "unit": "kg C m-2",
+      "area_basis": "per unit grid-cell area; sum of model woody PFT columns",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": "TREE_PFTS",
+      "records_per_site_year": 1,
+      "nonnegative": true,
+      "role": "biomass"
+    },
+    {
+      "variable": "clearcut_wood_carbon",
+      "keyword": "file_cmass_wood_clearcut_sts",
+      "file": "cmass_wood_clearcut_sts.out",
+      "unit": "kg C m-2 yr-1",
+      "area_basis": "per unit forest stand-type area",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": [
+        "Forest"
+      ],
+      "records_per_site_year": 1,
+      "nonnegative": true,
+      "role": "harvest_event"
+    },
+    {
+      "variable": "harvest_wood_carbon",
+      "keyword": "file_cmass_wood_harv_sts",
+      "file": "cmass_wood_harv_sts.out",
+      "unit": "kg C m-2 yr-1",
+      "area_basis": "per unit forest stand-type area",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": [
+        "Forest"
+      ],
+      "records_per_site_year": 1,
+      "nonnegative": true,
+      "role": "harvest_total"
+    },
+    {
+      "variable": "tree_carbon",
+      "keyword": "file_cmass_tree_sts",
+      "file": "cmass_tree_sts.out",
+      "unit": "kg C m-2",
+      "area_basis": "per unit forest stand-type area",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": [
+        "Forest"
+      ],
+      "records_per_site_year": 1,
+      "nonnegative": true
+    },
+    {
+      "variable": "wood_carbon",
+      "keyword": "file_cmass_wood_sts",
+      "file": "cmass_wood_sts.out",
+      "unit": "kg C m-2",
+      "area_basis": "per unit forest stand-type area",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": [
+        "Forest"
+      ],
+      "records_per_site_year": 1,
+      "nonnegative": true
+    },
+    {
+      "variable": "mortality_carbon",
+      "keyword": "file_cmass_tree_mort_sts",
+      "file": "cmass_tree_mort_sts.out",
+      "unit": "kg C m-2 yr-1",
+      "area_basis": "per unit forest stand-type area",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": [
+        "Forest"
+      ],
+      "records_per_site_year": 1,
+      "nonnegative": true
+    },
+    {
+      "variable": "npp",
+      "keyword": "file_anpp_sts",
+      "file": "anpp_sts.out",
+      "unit": "kg C m-2 yr-1",
+      "area_basis": "per unit forest stand-type area",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": [
+        "Forest"
+      ],
+      "records_per_site_year": 1,
+      "nonnegative": false
+    },
+    {
+      "variable": "gpp",
+      "keyword": "file_agpp_gridcell",
+      "file": "agpp_gridcell.out",
+      "unit": "kg C m-2 yr-1",
+      "area_basis": "per unit grid-cell area; sum of model woody PFT columns",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": "TREE_PFTS",
+      "records_per_site_year": 1,
+      "nonnegative": true
+    },
+    {
+      "variable": "density",
+      "keyword": "file_dens_sts",
+      "file": "dens_sts.out",
+      "unit": "individuals m-2",
+      "area_basis": "per unit forest stand-type area",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": [
+        "Forest"
+      ],
+      "records_per_site_year": 1,
+      "nonnegative": true
+    },
+    {
+      "variable": "litter_carbon",
+      "keyword": "file_clitter_sts",
+      "file": "clitter_sts.out",
+      "unit": "kg C m-2",
+      "area_basis": "per unit forest stand-type area",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": [
+        "Forest"
+      ],
+      "records_per_site_year": 1,
+      "nonnegative": true
+    },
+    {
+      "variable": "soil_carbon",
+      "keyword": "file_csoil_sts",
+      "file": "csoil_sts.out",
+      "unit": "kg C m-2",
+      "area_basis": "per unit forest stand-type area",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": [
+        "Forest"
+      ],
+      "records_per_site_year": 1,
+      "nonnegative": true
+    },
+    {
+      "variable": "height_TrBE",
+      "keyword": "file_speciesheights",
+      "file": "height.out",
+      "unit": "m",
+      "area_basis": "PFT mean for TrBE; verify executable weighting",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": [
+        "TrBE"
+      ],
+      "records_per_site_year": 1,
+      "nonnegative": true,
+      "component_aggregation": "single"
+    },
+    {
+      "variable": "diameter_TrBE",
+      "keyword": "file_speciesdiam",
+      "file": "diam.out",
+      "unit": "cm",
+      "area_basis": "PFT mean for TrBE; verify executable weighting",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "year_column": "Year",
+      "values": [
+        "TrBE"
+      ],
+      "records_per_site_year": 1,
+      "nonnegative": true,
+      "component_aggregation": "single"
+    }
+  ],
+  "workspace": "../scenario-workspace",
+  "regions": {
+    "amazon": {
+      "longitude": [
+        -70,
+        -50
+      ],
+      "latitude": [
+        -10,
+        0
+      ],
+      "weighting": "cell_area"
+    },
+    "reference": {
+      "sites": [
+        [
+          -64.75,
+          -0.75
+        ]
+      ],
+      "weighting": "equal"
+    }
+  },
+  "scenarios": [
+    {
+      "id": "early_lowco2",
+      "climate": {
+        "mode": "recycle",
+        "window_start": 1901,
+        "window_end": 1921,
+        "apply_from": 2001
+      },
+      "co2": {
+        "mode": "fixed_year",
+        "reference_year": 1901,
+        "apply_from": 2001
+      }
+    },
+    {
+      "id": "recent_lowco2",
+      "climate": {
+        "mode": "recycle",
+        "window_start": 2000,
+        "window_end": 2020,
+        "apply_from": 2001
+      },
+      "co2": {
+        "mode": "fixed_year",
+        "reference_year": 1901,
+        "apply_from": 2001
+      }
+    },
+    {
+      "id": "early_highco2",
+      "climate": {
+        "mode": "recycle",
+        "window_start": 1901,
+        "window_end": 1921,
+        "apply_from": 2001
+      },
+      "co2": {
+        "mode": "fixed_year",
+        "reference_year": 2020,
+        "apply_from": 2001
+      }
+    },
+    {
+      "id": "recent_highco2",
+      "climate": {
+        "mode": "recycle",
+        "window_start": 2000,
+        "window_end": 2020,
+        "apply_from": 2001
+      },
+      "co2": {
+        "mode": "fixed_year",
+        "reference_year": 2020,
+        "apply_from": 2001
+      }
+    },
+    {
+      "id": "sla",
+      "climate": {
+        "mode": "recycle",
+        "window_start": 2000,
+        "window_end": 2020,
+        "apply_from": 2001
+      },
+      "co2": {
+        "mode": "fixed_year",
+        "reference_year": 2020,
+        "apply_from": 2001
+      },
+      "sweep": {
+        "parameter": "sla",
+        "pfts": [
+          "TrBE",
+          "TrIBE"
+        ],
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ]
+      }
+    },
+    {
+      "id": "k_latosa",
+      "climate": {
+        "mode": "recycle",
+        "window_start": 2000,
+        "window_end": 2020,
+        "apply_from": 2001
+      },
+      "co2": {
+        "mode": "fixed_year",
+        "reference_year": 2020,
+        "apply_from": 2001
+      },
+      "sweep": {
+        "parameter": "k_latosa",
+        "pfts": [
+          "TrBE",
+          "TrIBE"
+        ],
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ]
+      }
+    },
+    {
+      "id": "twig0",
+      "climate": {
+        "mode": "recycle",
+        "window_start": 2000,
+        "window_end": 2020,
+        "apply_from": 2001
+      },
+      "co2": {
+        "mode": "fixed_year",
+        "reference_year": 2020,
+        "apply_from": 2001
+      },
+      "management": {
+        "twig_removal": 0
+      }
+    },
+    {
+      "id": "twig1",
+      "climate": {
+        "mode": "recycle",
+        "window_start": 2000,
+        "window_end": 2020,
+        "apply_from": 2001
+      },
+      "co2": {
+        "mode": "fixed_year",
+        "reference_year": 2020,
+        "apply_from": 2001
+      },
+      "management": {
+        "twig_removal": 1
+      }
+    },
+    {
+      "id": "density_low",
+      "climate": {
+        "mode": "recycle",
+        "window_start": 2000,
+        "window_end": 2020,
+        "apply_from": 2001
+      },
+      "co2": {
+        "mode": "fixed_year",
+        "reference_year": 2020,
+        "apply_from": 2001
+      },
+      "management": {
+        "densities": [
+          500,
+          500
+        ]
+      }
+    }
+  ],
+  "comparisons": {
+    "climate_lowco2": {
+      "experiments": [
+        "early_lowco2",
+        "recent_lowco2"
+      ],
+      "baseline": "early_lowco2",
+      "regions": [
+        "amazon"
+      ],
+      "axis": "years_since_cut",
+      "vary": [
+        "climate"
+      ]
+    },
+    "co2_recent": {
+      "experiments": [
+        "recent_lowco2",
+        "recent_highco2"
+      ],
+      "baseline": "recent_lowco2",
+      "regions": [
+        "amazon"
+      ],
+      "axis": "years_since_cut",
+      "vary": [
+        "co2"
+      ]
+    },
+    "climate_co2": {
+      "experiments": [
+        "early_lowco2",
+        "recent_lowco2",
+        "early_highco2",
+        "recent_highco2"
+      ],
+      "baseline": "early_lowco2",
+      "regions": [
+        "amazon"
+      ],
+      "axis": "years_since_cut",
+      "vary": [
+        "climate",
+        "co2"
+      ]
+    },
+    "sla": {
+      "experiments": [
+        "sla_1",
+        "sla_2",
+        "sla_3"
+      ],
+      "baseline": "sla_2",
+      "regions": [
+        "amazon"
+      ],
+      "axis": "years_since_cut",
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "k_latosa": {
+      "experiments": [
+        "k_latosa_1",
+        "k_latosa_2",
+        "k_latosa_3"
+      ],
+      "baseline": "k_latosa_2",
+      "regions": [
+        "amazon"
+      ],
+      "axis": "years_since_cut",
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "twig": {
+      "experiments": [
+        "twig0",
+        "recent_highco2",
+        "twig1"
+      ],
+      "baseline": "recent_highco2",
+      "regions": [
+        "amazon"
+      ],
+      "axis": "years_since_cut",
+      "vary": [
+        "management"
+      ]
+    },
+    "density": {
+      "experiments": [
+        "recent_highco2",
+        "density_low"
+      ],
+      "baseline": "recent_highco2",
+      "regions": [
+        "amazon"
+      ],
+      "axis": "years_since_cut",
+      "vary": [
+        "management"
+      ]
+    }
+  }
+}

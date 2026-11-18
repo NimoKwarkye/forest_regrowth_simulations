@@ -1,0 +1,2982 @@
+{
+  "analysis": {
+    "cell_areas": "cell_areas.csv",
+    "grid_resolution_degrees": [
+      0.5,
+      0.5
+    ],
+    "plot_colormap": "jet",
+    "plot_max_sites": 10,
+    "summary_ages": [
+      0,
+      20,
+      40,
+      60,
+      80,
+      100,
+      120
+    ]
+  },
+  "baseline": "baseline",
+  "biomass": {
+    "carbon_fraction": 0.5,
+    "definition": "REVIEW REQUIRED: verify file_agb_gridcell formula and carbon units against the deployed executable. Selected woody PFT columns exclude grasses.",
+    "definition_reviewed": true,
+    "kind": "dry_mass",
+    "output_unit": "kg dry matter m-2"
+  },
+  "cluster": "../examples/cluster.json",
+  "comparisons": {
+    "amazon_climate_co2": {
+      "axis": "years_since_cut",
+      "baseline": "amazon_early_lowco2",
+      "experiments": [
+        "amazon_early_lowco2",
+        "amazon_recent_lowco2",
+        "amazon_early_highco2",
+        "amazon_recent_highco2"
+      ],
+      "regions": [
+        "amazon"
+      ],
+      "vary": [
+        "climate",
+        "co2"
+      ]
+    },
+    "amazon_climate_lowco2": {
+      "axis": "years_since_cut",
+      "baseline": "amazon_early_lowco2",
+      "experiments": [
+        "amazon_early_lowco2",
+        "amazon_recent_lowco2"
+      ],
+      "regions": [
+        "amazon"
+      ],
+      "vary": [
+        "climate"
+      ]
+    },
+    "amazon_co2_recent": {
+      "axis": "years_since_cut",
+      "baseline": "amazon_recent_lowco2",
+      "experiments": [
+        "amazon_recent_lowco2",
+        "amazon_recent_highco2"
+      ],
+      "regions": [
+        "amazon"
+      ],
+      "vary": [
+        "co2"
+      ]
+    },
+    "amazon_k_latosa": {
+      "axis": "years_since_cut",
+      "baseline": "amazon_k_latosa_2",
+      "experiments": [
+        "amazon_k_latosa_1",
+        "amazon_k_latosa_2",
+        "amazon_k_latosa_3"
+      ],
+      "regions": [
+        "amazon"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "amazon_sla": {
+      "axis": "years_since_cut",
+      "baseline": "amazon_sla_2",
+      "experiments": [
+        "amazon_sla_1",
+        "amazon_sla_2",
+        "amazon_sla_3"
+      ],
+      "regions": [
+        "amazon"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "amazon_twig": {
+      "axis": "years_since_cut",
+      "baseline": "amazon_recent_highco2",
+      "experiments": [
+        "amazon_twig0",
+        "amazon_recent_highco2",
+        "amazon_twig1"
+      ],
+      "regions": [
+        "amazon"
+      ],
+      "vary": [
+        "management"
+      ]
+    },
+    "central_europe_climate_co2": {
+      "axis": "years_since_cut",
+      "baseline": "central_europe_early_lowco2",
+      "experiments": [
+        "central_europe_early_lowco2",
+        "central_europe_recent_lowco2",
+        "central_europe_early_highco2",
+        "central_europe_recent_highco2"
+      ],
+      "regions": [
+        "central_europe"
+      ],
+      "vary": [
+        "climate",
+        "co2"
+      ]
+    },
+    "central_europe_climate_lowco2": {
+      "axis": "years_since_cut",
+      "baseline": "central_europe_early_lowco2",
+      "experiments": [
+        "central_europe_early_lowco2",
+        "central_europe_recent_lowco2"
+      ],
+      "regions": [
+        "central_europe"
+      ],
+      "vary": [
+        "climate"
+      ]
+    },
+    "central_europe_co2_recent": {
+      "axis": "years_since_cut",
+      "baseline": "central_europe_recent_lowco2",
+      "experiments": [
+        "central_europe_recent_lowco2",
+        "central_europe_recent_highco2"
+      ],
+      "regions": [
+        "central_europe"
+      ],
+      "vary": [
+        "co2"
+      ]
+    },
+    "central_europe_k_latosa": {
+      "axis": "years_since_cut",
+      "baseline": "central_europe_k_latosa_2",
+      "experiments": [
+        "central_europe_k_latosa_1",
+        "central_europe_k_latosa_2",
+        "central_europe_k_latosa_3"
+      ],
+      "regions": [
+        "central_europe"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "central_europe_sla": {
+      "axis": "years_since_cut",
+      "baseline": "central_europe_sla_2",
+      "experiments": [
+        "central_europe_sla_1",
+        "central_europe_sla_2",
+        "central_europe_sla_3"
+      ],
+      "regions": [
+        "central_europe"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "central_europe_twig": {
+      "axis": "years_since_cut",
+      "baseline": "central_europe_recent_highco2",
+      "experiments": [
+        "central_europe_twig0",
+        "central_europe_recent_highco2",
+        "central_europe_twig1"
+      ],
+      "regions": [
+        "central_europe"
+      ],
+      "vary": [
+        "management"
+      ]
+    },
+    "iberia_climate_co2": {
+      "axis": "years_since_cut",
+      "baseline": "iberia_early_lowco2",
+      "experiments": [
+        "iberia_early_lowco2",
+        "iberia_recent_lowco2",
+        "iberia_early_highco2",
+        "iberia_recent_highco2"
+      ],
+      "regions": [
+        "iberia"
+      ],
+      "vary": [
+        "climate",
+        "co2"
+      ]
+    },
+    "iberia_climate_lowco2": {
+      "axis": "years_since_cut",
+      "baseline": "iberia_early_lowco2",
+      "experiments": [
+        "iberia_early_lowco2",
+        "iberia_recent_lowco2"
+      ],
+      "regions": [
+        "iberia"
+      ],
+      "vary": [
+        "climate"
+      ]
+    },
+    "iberia_co2_recent": {
+      "axis": "years_since_cut",
+      "baseline": "iberia_recent_lowco2",
+      "experiments": [
+        "iberia_recent_lowco2",
+        "iberia_recent_highco2"
+      ],
+      "regions": [
+        "iberia"
+      ],
+      "vary": [
+        "co2"
+      ]
+    },
+    "iberia_k_latosa": {
+      "axis": "years_since_cut",
+      "baseline": "iberia_k_latosa_2",
+      "experiments": [
+        "iberia_k_latosa_1",
+        "iberia_k_latosa_2",
+        "iberia_k_latosa_3"
+      ],
+      "regions": [
+        "iberia"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "iberia_sla": {
+      "axis": "years_since_cut",
+      "baseline": "iberia_sla_2",
+      "experiments": [
+        "iberia_sla_1",
+        "iberia_sla_2",
+        "iberia_sla_3"
+      ],
+      "regions": [
+        "iberia"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "iberia_twig": {
+      "axis": "years_since_cut",
+      "baseline": "iberia_recent_highco2",
+      "experiments": [
+        "iberia_twig0",
+        "iberia_recent_highco2",
+        "iberia_twig1"
+      ],
+      "regions": [
+        "iberia"
+      ],
+      "vary": [
+        "management"
+      ]
+    },
+    "scandinavia_climate_co2": {
+      "axis": "years_since_cut",
+      "baseline": "scandinavia_early_lowco2",
+      "experiments": [
+        "scandinavia_early_lowco2",
+        "scandinavia_recent_lowco2",
+        "scandinavia_early_highco2",
+        "scandinavia_recent_highco2"
+      ],
+      "regions": [
+        "scandinavia"
+      ],
+      "vary": [
+        "climate",
+        "co2"
+      ]
+    },
+    "scandinavia_climate_lowco2": {
+      "axis": "years_since_cut",
+      "baseline": "scandinavia_early_lowco2",
+      "experiments": [
+        "scandinavia_early_lowco2",
+        "scandinavia_recent_lowco2"
+      ],
+      "regions": [
+        "scandinavia"
+      ],
+      "vary": [
+        "climate"
+      ]
+    },
+    "scandinavia_co2_recent": {
+      "axis": "years_since_cut",
+      "baseline": "scandinavia_recent_lowco2",
+      "experiments": [
+        "scandinavia_recent_lowco2",
+        "scandinavia_recent_highco2"
+      ],
+      "regions": [
+        "scandinavia"
+      ],
+      "vary": [
+        "co2"
+      ]
+    },
+    "scandinavia_k_latosa": {
+      "axis": "years_since_cut",
+      "baseline": "scandinavia_k_latosa_2",
+      "experiments": [
+        "scandinavia_k_latosa_1",
+        "scandinavia_k_latosa_2",
+        "scandinavia_k_latosa_3"
+      ],
+      "regions": [
+        "scandinavia"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "scandinavia_sla": {
+      "axis": "years_since_cut",
+      "baseline": "scandinavia_sla_2",
+      "experiments": [
+        "scandinavia_sla_1",
+        "scandinavia_sla_2",
+        "scandinavia_sla_3"
+      ],
+      "regions": [
+        "scandinavia"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "scandinavia_twig": {
+      "axis": "years_since_cut",
+      "baseline": "scandinavia_recent_highco2",
+      "experiments": [
+        "scandinavia_twig0",
+        "scandinavia_recent_highco2",
+        "scandinavia_twig1"
+      ],
+      "regions": [
+        "scandinavia"
+      ],
+      "vary": [
+        "management"
+      ]
+    },
+    "se_us_climate_co2": {
+      "axis": "years_since_cut",
+      "baseline": "se_us_early_lowco2",
+      "experiments": [
+        "se_us_early_lowco2",
+        "se_us_recent_lowco2",
+        "se_us_early_highco2",
+        "se_us_recent_highco2"
+      ],
+      "regions": [
+        "se_us"
+      ],
+      "vary": [
+        "climate",
+        "co2"
+      ]
+    },
+    "se_us_climate_lowco2": {
+      "axis": "years_since_cut",
+      "baseline": "se_us_early_lowco2",
+      "experiments": [
+        "se_us_early_lowco2",
+        "se_us_recent_lowco2"
+      ],
+      "regions": [
+        "se_us"
+      ],
+      "vary": [
+        "climate"
+      ]
+    },
+    "se_us_co2_recent": {
+      "axis": "years_since_cut",
+      "baseline": "se_us_recent_lowco2",
+      "experiments": [
+        "se_us_recent_lowco2",
+        "se_us_recent_highco2"
+      ],
+      "regions": [
+        "se_us"
+      ],
+      "vary": [
+        "co2"
+      ]
+    },
+    "se_us_k_latosa": {
+      "axis": "years_since_cut",
+      "baseline": "se_us_k_latosa_2",
+      "experiments": [
+        "se_us_k_latosa_1",
+        "se_us_k_latosa_2",
+        "se_us_k_latosa_3"
+      ],
+      "regions": [
+        "se_us"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "se_us_sla": {
+      "axis": "years_since_cut",
+      "baseline": "se_us_sla_2",
+      "experiments": [
+        "se_us_sla_1",
+        "se_us_sla_2",
+        "se_us_sla_3"
+      ],
+      "regions": [
+        "se_us"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "se_us_twig": {
+      "axis": "years_since_cut",
+      "baseline": "se_us_recent_highco2",
+      "experiments": [
+        "se_us_twig0",
+        "se_us_recent_highco2",
+        "se_us_twig1"
+      ],
+      "regions": [
+        "se_us"
+      ],
+      "vary": [
+        "management"
+      ]
+    },
+    "southern_chile_climate_co2": {
+      "axis": "years_since_cut",
+      "baseline": "southern_chile_early_lowco2",
+      "experiments": [
+        "southern_chile_early_lowco2",
+        "southern_chile_recent_lowco2",
+        "southern_chile_early_highco2",
+        "southern_chile_recent_highco2"
+      ],
+      "regions": [
+        "southern_chile"
+      ],
+      "vary": [
+        "climate",
+        "co2"
+      ]
+    },
+    "southern_chile_climate_lowco2": {
+      "axis": "years_since_cut",
+      "baseline": "southern_chile_early_lowco2",
+      "experiments": [
+        "southern_chile_early_lowco2",
+        "southern_chile_recent_lowco2"
+      ],
+      "regions": [
+        "southern_chile"
+      ],
+      "vary": [
+        "climate"
+      ]
+    },
+    "southern_chile_co2_recent": {
+      "axis": "years_since_cut",
+      "baseline": "southern_chile_recent_lowco2",
+      "experiments": [
+        "southern_chile_recent_lowco2",
+        "southern_chile_recent_highco2"
+      ],
+      "regions": [
+        "southern_chile"
+      ],
+      "vary": [
+        "co2"
+      ]
+    },
+    "southern_chile_k_latosa": {
+      "axis": "years_since_cut",
+      "baseline": "southern_chile_k_latosa_2",
+      "experiments": [
+        "southern_chile_k_latosa_1",
+        "southern_chile_k_latosa_2",
+        "southern_chile_k_latosa_3"
+      ],
+      "regions": [
+        "southern_chile"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "southern_chile_sla": {
+      "axis": "years_since_cut",
+      "baseline": "southern_chile_sla_2",
+      "experiments": [
+        "southern_chile_sla_1",
+        "southern_chile_sla_2",
+        "southern_chile_sla_3"
+      ],
+      "regions": [
+        "southern_chile"
+      ],
+      "vary": [
+        "pft_overrides"
+      ]
+    },
+    "southern_chile_twig": {
+      "axis": "years_since_cut",
+      "baseline": "southern_chile_recent_highco2",
+      "experiments": [
+        "southern_chile_twig0",
+        "southern_chile_recent_highco2",
+        "southern_chile_twig1"
+      ],
+      "regions": [
+        "southern_chile"
+      ],
+      "vary": [
+        "management"
+      ]
+    }
+  },
+  "cut_year": 2001,
+  "disturbance_audit_confirmed": true,
+  "executable_compatibility_confirmed": true,
+  "experiments": "../examples/scenario-management.csv",
+  "first_year": 1901,
+  "gridlist": "gridlist.txt",
+  "input_module": "cfx",
+  "ins_directory": "/bg/data/lpj/kwarkye-n/simulations/eu_to_global/forest_regrowth/test_2",
+  "killgrass_at_cc": 0,
+  "landcover_audit_confirmed": true,
+  "last_year": 2121,
+  "main_ins": "guess.ins",
+  "management": "Forest_management",
+  "model_source": "/bg/home/kwarkye-n/eu_applications/svn_eu/european_applications",
+  "outputs": [
+    {
+      "area_basis": "per unit grid-cell area; sum of model woody PFT columns",
+      "file": "agb_gridcell.out",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "keyword": "file_agb_gridcell",
+      "nonnegative": true,
+      "records_per_site_year": 1,
+      "role": "biomass",
+      "unit": "kg C m-2",
+      "values": "TREE_PFTS",
+      "variable": "aboveground_carbon",
+      "year_column": "Year"
+    },
+    {
+      "area_basis": "per unit forest stand-type area",
+      "file": "cmass_wood_clearcut_sts.out",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "keyword": "file_cmass_wood_clearcut_sts",
+      "nonnegative": true,
+      "records_per_site_year": 1,
+      "role": "harvest_event",
+      "unit": "kg C m-2 yr-1",
+      "values": [
+        "Forest"
+      ],
+      "variable": "clearcut_wood_carbon",
+      "year_column": "Year"
+    },
+    {
+      "area_basis": "per unit forest stand-type area",
+      "file": "cmass_wood_harv_sts.out",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "keyword": "file_cmass_wood_harv_sts",
+      "nonnegative": true,
+      "records_per_site_year": 1,
+      "role": "harvest_total",
+      "unit": "kg C m-2 yr-1",
+      "values": [
+        "Forest"
+      ],
+      "variable": "harvest_wood_carbon",
+      "year_column": "Year"
+    },
+    {
+      "area_basis": "per unit forest stand-type area",
+      "file": "cmass_tree_sts.out",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "keyword": "file_cmass_tree_sts",
+      "nonnegative": true,
+      "records_per_site_year": 1,
+      "unit": "kg C m-2",
+      "values": [
+        "Forest"
+      ],
+      "variable": "tree_carbon",
+      "year_column": "Year"
+    },
+    {
+      "area_basis": "per unit forest stand-type area",
+      "file": "cmass_wood_sts.out",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "keyword": "file_cmass_wood_sts",
+      "nonnegative": true,
+      "records_per_site_year": 1,
+      "unit": "kg C m-2",
+      "values": [
+        "Forest"
+      ],
+      "variable": "wood_carbon",
+      "year_column": "Year"
+    },
+    {
+      "area_basis": "per unit forest stand-type area",
+      "file": "cmass_tree_mort_sts.out",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "keyword": "file_cmass_tree_mort_sts",
+      "nonnegative": true,
+      "records_per_site_year": 1,
+      "unit": "kg C m-2 yr-1",
+      "values": [
+        "Forest"
+      ],
+      "variable": "mortality_carbon",
+      "year_column": "Year"
+    },
+    {
+      "area_basis": "per unit forest stand-type area",
+      "file": "anpp_sts.out",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "keyword": "file_anpp_sts",
+      "nonnegative": false,
+      "records_per_site_year": 1,
+      "unit": "kg C m-2 yr-1",
+      "values": [
+        "Forest"
+      ],
+      "variable": "npp",
+      "year_column": "Year"
+    },
+    {
+      "area_basis": "per unit grid-cell area; sum of model woody PFT columns",
+      "file": "agpp_gridcell.out",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "keyword": "file_agpp_gridcell",
+      "nonnegative": true,
+      "records_per_site_year": 1,
+      "unit": "kg C m-2 yr-1",
+      "values": "TREE_PFTS",
+      "variable": "gpp",
+      "year_column": "Year"
+    },
+    {
+      "area_basis": "per unit forest stand-type area",
+      "file": "dens_sts.out",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "keyword": "file_dens_sts",
+      "nonnegative": true,
+      "records_per_site_year": 1,
+      "unit": "individuals m-2",
+      "values": [
+        "Forest"
+      ],
+      "variable": "density",
+      "year_column": "Year"
+    },
+    {
+      "area_basis": "per unit forest stand-type area",
+      "file": "clitter_sts.out",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "keyword": "file_clitter_sts",
+      "nonnegative": true,
+      "records_per_site_year": 1,
+      "unit": "kg C m-2",
+      "values": [
+        "Forest"
+      ],
+      "variable": "litter_carbon",
+      "year_column": "Year"
+    },
+    {
+      "area_basis": "per unit forest stand-type area",
+      "file": "csoil_sts.out",
+      "key": [
+        "Lon",
+        "Lat",
+        "Year"
+      ],
+      "keyword": "file_csoil_sts",
+      "nonnegative": true,
+      "records_per_site_year": 1,
+      "unit": "kg C m-2",
+      "values": [
+        "Forest"
+      ],
+      "variable": "soil_carbon",
+      "year_column": "Year"
+    }
+  ],
+  "prepared_landuse": {
+    "dynamic": "landuse_dynamic.txt",
+    "forest_only": "landuse_forest1.txt"
+  },
+  "regions": {
+    "amazon": {
+      "latitude": [
+        -7.0,
+        -4.5
+      ],
+      "longitude": [
+        -69.5,
+        -64.5
+      ],
+      "sites": [
+        [
+          -69.25,
+          -6.75
+        ],
+        [
+          -69.25,
+          -6.25
+        ],
+        [
+          -69.25,
+          -5.75
+        ],
+        [
+          -69.25,
+          -5.25
+        ],
+        [
+          -69.25,
+          -4.75
+        ],
+        [
+          -68.75,
+          -6.75
+        ],
+        [
+          -68.75,
+          -6.25
+        ],
+        [
+          -68.75,
+          -5.75
+        ],
+        [
+          -68.75,
+          -5.25
+        ],
+        [
+          -68.75,
+          -4.75
+        ],
+        [
+          -68.25,
+          -6.75
+        ],
+        [
+          -68.25,
+          -6.25
+        ],
+        [
+          -68.25,
+          -5.75
+        ],
+        [
+          -68.25,
+          -5.25
+        ],
+        [
+          -68.25,
+          -4.75
+        ],
+        [
+          -67.75,
+          -6.75
+        ],
+        [
+          -67.75,
+          -6.25
+        ],
+        [
+          -67.75,
+          -5.75
+        ],
+        [
+          -67.75,
+          -5.25
+        ],
+        [
+          -67.75,
+          -4.75
+        ],
+        [
+          -67.25,
+          -6.75
+        ],
+        [
+          -67.25,
+          -6.25
+        ],
+        [
+          -67.25,
+          -5.75
+        ],
+        [
+          -67.25,
+          -5.25
+        ],
+        [
+          -67.25,
+          -4.75
+        ],
+        [
+          -66.75,
+          -6.75
+        ],
+        [
+          -66.75,
+          -6.25
+        ],
+        [
+          -66.75,
+          -5.75
+        ],
+        [
+          -66.75,
+          -5.25
+        ],
+        [
+          -66.75,
+          -4.75
+        ],
+        [
+          -66.25,
+          -6.75
+        ],
+        [
+          -66.25,
+          -6.25
+        ],
+        [
+          -66.25,
+          -5.75
+        ],
+        [
+          -66.25,
+          -5.25
+        ],
+        [
+          -66.25,
+          -4.75
+        ],
+        [
+          -65.75,
+          -6.75
+        ],
+        [
+          -65.75,
+          -6.25
+        ],
+        [
+          -65.75,
+          -5.75
+        ],
+        [
+          -65.75,
+          -5.25
+        ],
+        [
+          -65.75,
+          -4.75
+        ],
+        [
+          -65.25,
+          -6.75
+        ],
+        [
+          -65.25,
+          -6.25
+        ],
+        [
+          -65.25,
+          -5.75
+        ],
+        [
+          -65.25,
+          -5.25
+        ],
+        [
+          -65.25,
+          -4.75
+        ],
+        [
+          -64.75,
+          -6.75
+        ],
+        [
+          -64.75,
+          -6.25
+        ],
+        [
+          -64.75,
+          -5.75
+        ],
+        [
+          -64.75,
+          -5.25
+        ],
+        [
+          -64.75,
+          -4.75
+        ]
+      ],
+      "weighting": "cell_area"
+    },
+    "central_europe": {
+      "latitude": [
+        45.0,
+        48.0
+      ],
+      "longitude": [
+        11.0,
+        15.5
+      ],
+      "sites": [
+        [
+          11.25,
+          45.25
+        ],
+        [
+          11.25,
+          45.75
+        ],
+        [
+          11.25,
+          46.25
+        ],
+        [
+          11.25,
+          46.75
+        ],
+        [
+          11.25,
+          47.25
+        ],
+        [
+          11.25,
+          47.75
+        ],
+        [
+          11.75,
+          45.25
+        ],
+        [
+          11.75,
+          45.75
+        ],
+        [
+          11.75,
+          46.25
+        ],
+        [
+          11.75,
+          46.75
+        ],
+        [
+          11.75,
+          47.25
+        ],
+        [
+          11.75,
+          47.75
+        ],
+        [
+          12.25,
+          45.25
+        ],
+        [
+          12.25,
+          45.75
+        ],
+        [
+          12.25,
+          46.25
+        ],
+        [
+          12.25,
+          46.75
+        ],
+        [
+          12.25,
+          47.25
+        ],
+        [
+          12.25,
+          47.75
+        ],
+        [
+          12.75,
+          45.75
+        ],
+        [
+          12.75,
+          46.25
+        ],
+        [
+          12.75,
+          46.75
+        ],
+        [
+          12.75,
+          47.25
+        ],
+        [
+          12.75,
+          47.75
+        ],
+        [
+          13.25,
+          46.25
+        ],
+        [
+          13.25,
+          46.75
+        ],
+        [
+          13.25,
+          47.25
+        ],
+        [
+          13.25,
+          47.75
+        ],
+        [
+          13.75,
+          45.75
+        ],
+        [
+          13.75,
+          46.25
+        ],
+        [
+          13.75,
+          46.75
+        ],
+        [
+          13.75,
+          47.25
+        ],
+        [
+          13.75,
+          47.75
+        ],
+        [
+          14.25,
+          45.25
+        ],
+        [
+          14.25,
+          45.75
+        ],
+        [
+          14.25,
+          46.25
+        ],
+        [
+          14.25,
+          46.75
+        ],
+        [
+          14.25,
+          47.25
+        ],
+        [
+          14.25,
+          47.75
+        ],
+        [
+          14.75,
+          45.25
+        ],
+        [
+          14.75,
+          45.75
+        ],
+        [
+          14.75,
+          46.25
+        ],
+        [
+          14.75,
+          46.75
+        ],
+        [
+          14.75,
+          47.25
+        ],
+        [
+          14.75,
+          47.75
+        ],
+        [
+          15.25,
+          45.25
+        ],
+        [
+          15.25,
+          45.75
+        ],
+        [
+          15.25,
+          46.25
+        ],
+        [
+          15.25,
+          46.75
+        ],
+        [
+          15.25,
+          47.25
+        ],
+        [
+          15.25,
+          47.75
+        ]
+      ],
+      "weighting": "cell_area"
+    },
+    "iberia": {
+      "latitude": [
+        41.5,
+        43.0
+      ],
+      "longitude": [
+        -8.5,
+        3.0
+      ],
+      "sites": [
+        [
+          -8.25,
+          41.75
+        ],
+        [
+          -8.25,
+          42.25
+        ],
+        [
+          -8.25,
+          42.75
+        ],
+        [
+          -7.75,
+          41.75
+        ],
+        [
+          -7.75,
+          42.25
+        ],
+        [
+          -7.75,
+          42.75
+        ],
+        [
+          -7.25,
+          41.75
+        ],
+        [
+          -7.25,
+          42.25
+        ],
+        [
+          -7.25,
+          42.75
+        ],
+        [
+          -6.75,
+          41.75
+        ],
+        [
+          -6.75,
+          42.25
+        ],
+        [
+          -6.75,
+          42.75
+        ],
+        [
+          -6.25,
+          41.75
+        ],
+        [
+          -6.25,
+          42.25
+        ],
+        [
+          -6.25,
+          42.75
+        ],
+        [
+          -5.75,
+          42.75
+        ],
+        [
+          -5.25,
+          42.75
+        ],
+        [
+          -4.75,
+          42.75
+        ],
+        [
+          -4.25,
+          42.75
+        ],
+        [
+          -3.75,
+          42.75
+        ],
+        [
+          -3.25,
+          41.75
+        ],
+        [
+          -3.25,
+          42.25
+        ],
+        [
+          -3.25,
+          42.75
+        ],
+        [
+          -2.75,
+          41.75
+        ],
+        [
+          -2.75,
+          42.25
+        ],
+        [
+          -2.75,
+          42.75
+        ],
+        [
+          -2.25,
+          42.25
+        ],
+        [
+          -2.25,
+          42.75
+        ],
+        [
+          -1.75,
+          42.75
+        ],
+        [
+          -1.25,
+          42.75
+        ],
+        [
+          -0.75,
+          42.25
+        ],
+        [
+          -0.75,
+          42.75
+        ],
+        [
+          -0.25,
+          42.25
+        ],
+        [
+          -0.25,
+          42.75
+        ],
+        [
+          0.25,
+          42.25
+        ],
+        [
+          0.25,
+          42.75
+        ],
+        [
+          0.75,
+          42.25
+        ],
+        [
+          0.75,
+          42.75
+        ],
+        [
+          1.25,
+          41.75
+        ],
+        [
+          1.25,
+          42.25
+        ],
+        [
+          1.25,
+          42.75
+        ],
+        [
+          1.75,
+          41.75
+        ],
+        [
+          1.75,
+          42.25
+        ],
+        [
+          1.75,
+          42.75
+        ],
+        [
+          2.25,
+          41.75
+        ],
+        [
+          2.25,
+          42.25
+        ],
+        [
+          2.25,
+          42.75
+        ],
+        [
+          2.75,
+          41.75
+        ],
+        [
+          2.75,
+          42.25
+        ],
+        [
+          2.75,
+          42.75
+        ]
+      ],
+      "weighting": "cell_area"
+    },
+    "scandinavia": {
+      "latitude": [
+        59.5,
+        64.5
+      ],
+      "longitude": [
+        14.5,
+        17.0
+      ],
+      "sites": [
+        [
+          14.75,
+          59.75
+        ],
+        [
+          14.75,
+          60.25
+        ],
+        [
+          14.75,
+          60.75
+        ],
+        [
+          14.75,
+          61.25
+        ],
+        [
+          14.75,
+          61.75
+        ],
+        [
+          14.75,
+          62.25
+        ],
+        [
+          14.75,
+          62.75
+        ],
+        [
+          14.75,
+          63.25
+        ],
+        [
+          14.75,
+          63.75
+        ],
+        [
+          14.75,
+          64.25
+        ],
+        [
+          15.25,
+          59.75
+        ],
+        [
+          15.25,
+          60.25
+        ],
+        [
+          15.25,
+          60.75
+        ],
+        [
+          15.25,
+          61.25
+        ],
+        [
+          15.25,
+          61.75
+        ],
+        [
+          15.25,
+          62.25
+        ],
+        [
+          15.25,
+          62.75
+        ],
+        [
+          15.25,
+          63.25
+        ],
+        [
+          15.25,
+          63.75
+        ],
+        [
+          15.25,
+          64.25
+        ],
+        [
+          15.75,
+          59.75
+        ],
+        [
+          15.75,
+          60.25
+        ],
+        [
+          15.75,
+          60.75
+        ],
+        [
+          15.75,
+          61.25
+        ],
+        [
+          15.75,
+          61.75
+        ],
+        [
+          15.75,
+          62.25
+        ],
+        [
+          15.75,
+          62.75
+        ],
+        [
+          15.75,
+          63.25
+        ],
+        [
+          15.75,
+          63.75
+        ],
+        [
+          15.75,
+          64.25
+        ],
+        [
+          16.25,
+          59.75
+        ],
+        [
+          16.25,
+          60.25
+        ],
+        [
+          16.25,
+          60.75
+        ],
+        [
+          16.25,
+          61.25
+        ],
+        [
+          16.25,
+          61.75
+        ],
+        [
+          16.25,
+          62.25
+        ],
+        [
+          16.25,
+          62.75
+        ],
+        [
+          16.25,
+          63.25
+        ],
+        [
+          16.25,
+          63.75
+        ],
+        [
+          16.25,
+          64.25
+        ],
+        [
+          16.75,
+          59.75
+        ],
+        [
+          16.75,
+          60.25
+        ],
+        [
+          16.75,
+          60.75
+        ],
+        [
+          16.75,
+          61.25
+        ],
+        [
+          16.75,
+          61.75
+        ],
+        [
+          16.75,
+          62.25
+        ],
+        [
+          16.75,
+          62.75
+        ],
+        [
+          16.75,
+          63.25
+        ],
+        [
+          16.75,
+          63.75
+        ],
+        [
+          16.75,
+          64.25
+        ]
+      ],
+      "weighting": "cell_area"
+    },
+    "se_us": {
+      "latitude": [
+        31.5,
+        34.0
+      ],
+      "longitude": [
+        -90.0,
+        -85.0
+      ],
+      "sites": [
+        [
+          -89.75,
+          31.75
+        ],
+        [
+          -89.75,
+          32.25
+        ],
+        [
+          -89.75,
+          32.75
+        ],
+        [
+          -89.75,
+          33.25
+        ],
+        [
+          -89.75,
+          33.75
+        ],
+        [
+          -89.25,
+          31.75
+        ],
+        [
+          -89.25,
+          32.25
+        ],
+        [
+          -89.25,
+          32.75
+        ],
+        [
+          -89.25,
+          33.25
+        ],
+        [
+          -89.25,
+          33.75
+        ],
+        [
+          -88.75,
+          31.75
+        ],
+        [
+          -88.75,
+          32.25
+        ],
+        [
+          -88.75,
+          32.75
+        ],
+        [
+          -88.75,
+          33.25
+        ],
+        [
+          -88.75,
+          33.75
+        ],
+        [
+          -88.25,
+          31.75
+        ],
+        [
+          -88.25,
+          32.25
+        ],
+        [
+          -88.25,
+          32.75
+        ],
+        [
+          -88.25,
+          33.25
+        ],
+        [
+          -88.25,
+          33.75
+        ],
+        [
+          -87.75,
+          31.75
+        ],
+        [
+          -87.75,
+          32.25
+        ],
+        [
+          -87.75,
+          32.75
+        ],
+        [
+          -87.75,
+          33.25
+        ],
+        [
+          -87.75,
+          33.75
+        ],
+        [
+          -87.25,
+          31.75
+        ],
+        [
+          -87.25,
+          32.25
+        ],
+        [
+          -87.25,
+          32.75
+        ],
+        [
+          -87.25,
+          33.25
+        ],
+        [
+          -87.25,
+          33.75
+        ],
+        [
+          -86.75,
+          31.75
+        ],
+        [
+          -86.75,
+          32.25
+        ],
+        [
+          -86.75,
+          32.75
+        ],
+        [
+          -86.75,
+          33.25
+        ],
+        [
+          -86.75,
+          33.75
+        ],
+        [
+          -86.25,
+          31.75
+        ],
+        [
+          -86.25,
+          32.25
+        ],
+        [
+          -86.25,
+          32.75
+        ],
+        [
+          -86.25,
+          33.25
+        ],
+        [
+          -86.25,
+          33.75
+        ],
+        [
+          -85.75,
+          31.75
+        ],
+        [
+          -85.75,
+          32.25
+        ],
+        [
+          -85.75,
+          32.75
+        ],
+        [
+          -85.75,
+          33.25
+        ],
+        [
+          -85.75,
+          33.75
+        ],
+        [
+          -85.25,
+          31.75
+        ],
+        [
+          -85.25,
+          32.25
+        ],
+        [
+          -85.25,
+          32.75
+        ],
+        [
+          -85.25,
+          33.25
+        ],
+        [
+          -85.25,
+          33.75
+        ]
+      ],
+      "weighting": "cell_area"
+    },
+    "southern_chile": {
+      "latitude": [
+        -44.5,
+        -38.0
+      ],
+      "longitude": [
+        -74.0,
+        -71.5
+      ],
+      "sites": [
+        [
+          -73.75,
+          -44.25
+        ],
+        [
+          -73.75,
+          -43.25
+        ],
+        [
+          -73.75,
+          -42.75
+        ],
+        [
+          -73.75,
+          -42.25
+        ],
+        [
+          -73.75,
+          -41.75
+        ],
+        [
+          -73.75,
+          -41.25
+        ],
+        [
+          -73.75,
+          -40.75
+        ],
+        [
+          -73.75,
+          -40.25
+        ],
+        [
+          -73.25,
+          -44.25
+        ],
+        [
+          -73.25,
+          -41.75
+        ],
+        [
+          -73.25,
+          -40.25
+        ],
+        [
+          -73.25,
+          -39.75
+        ],
+        [
+          -73.25,
+          -39.25
+        ],
+        [
+          -73.25,
+          -38.75
+        ],
+        [
+          -73.25,
+          -38.25
+        ],
+        [
+          -72.75,
+          -44.25
+        ],
+        [
+          -72.75,
+          -43.75
+        ],
+        [
+          -72.75,
+          -43.25
+        ],
+        [
+          -72.75,
+          -42.75
+        ],
+        [
+          -72.75,
+          -41.75
+        ],
+        [
+          -72.75,
+          -41.25
+        ],
+        [
+          -72.75,
+          -39.75
+        ],
+        [
+          -72.75,
+          -39.25
+        ],
+        [
+          -72.75,
+          -38.75
+        ],
+        [
+          -72.75,
+          -38.25
+        ],
+        [
+          -72.25,
+          -44.25
+        ],
+        [
+          -72.25,
+          -43.75
+        ],
+        [
+          -72.25,
+          -43.25
+        ],
+        [
+          -72.25,
+          -42.75
+        ],
+        [
+          -72.25,
+          -42.25
+        ],
+        [
+          -72.25,
+          -41.75
+        ],
+        [
+          -72.25,
+          -41.25
+        ],
+        [
+          -72.25,
+          -40.75
+        ],
+        [
+          -72.25,
+          -40.25
+        ],
+        [
+          -72.25,
+          -39.75
+        ],
+        [
+          -72.25,
+          -39.25
+        ],
+        [
+          -72.25,
+          -38.25
+        ],
+        [
+          -71.75,
+          -44.25
+        ],
+        [
+          -71.75,
+          -43.75
+        ],
+        [
+          -71.75,
+          -43.25
+        ],
+        [
+          -71.75,
+          -42.75
+        ],
+        [
+          -71.75,
+          -42.25
+        ],
+        [
+          -71.75,
+          -41.75
+        ],
+        [
+          -71.75,
+          -41.25
+        ],
+        [
+          -71.75,
+          -40.75
+        ],
+        [
+          -71.75,
+          -40.25
+        ],
+        [
+          -71.75,
+          -39.75
+        ],
+        [
+          -71.75,
+          -39.25
+        ],
+        [
+          -71.75,
+          -38.75
+        ],
+        [
+          -71.75,
+          -38.25
+        ]
+      ],
+      "weighting": "cell_area"
+    }
+  },
+  "scenarios": [
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "amazon_early_lowco2",
+      "management": {},
+      "sites": "amazon"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "amazon_recent_lowco2",
+      "management": {},
+      "sites": "amazon"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "amazon_early_highco2",
+      "management": {},
+      "sites": "amazon"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "amazon_recent_highco2",
+      "management": {},
+      "sites": "amazon"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "amazon_sla",
+      "management": {},
+      "sites": "amazon",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "sla",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "amazon_k_latosa",
+      "management": {},
+      "sites": "amazon",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "k_latosa",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "amazon_twig0",
+      "management": {
+        "twig_removal": 0
+      },
+      "sites": "amazon"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "amazon_twig1",
+      "management": {
+        "twig_removal": 1
+      },
+      "sites": "amazon"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "se_us_early_lowco2",
+      "management": {},
+      "sites": "se_us"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "se_us_recent_lowco2",
+      "management": {},
+      "sites": "se_us"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "se_us_early_highco2",
+      "management": {},
+      "sites": "se_us"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "se_us_recent_highco2",
+      "management": {},
+      "sites": "se_us"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "se_us_sla",
+      "management": {},
+      "sites": "se_us",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "sla",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "se_us_k_latosa",
+      "management": {},
+      "sites": "se_us",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "k_latosa",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "se_us_twig0",
+      "management": {
+        "twig_removal": 0
+      },
+      "sites": "se_us"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "se_us_twig1",
+      "management": {
+        "twig_removal": 1
+      },
+      "sites": "se_us"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "central_europe_early_lowco2",
+      "management": {},
+      "sites": "central_europe"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "central_europe_recent_lowco2",
+      "management": {},
+      "sites": "central_europe"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "central_europe_early_highco2",
+      "management": {},
+      "sites": "central_europe"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "central_europe_recent_highco2",
+      "management": {},
+      "sites": "central_europe"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "central_europe_sla",
+      "management": {},
+      "sites": "central_europe",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "sla",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "central_europe_k_latosa",
+      "management": {},
+      "sites": "central_europe",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "k_latosa",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "central_europe_twig0",
+      "management": {
+        "twig_removal": 0
+      },
+      "sites": "central_europe"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "central_europe_twig1",
+      "management": {
+        "twig_removal": 1
+      },
+      "sites": "central_europe"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "scandinavia_early_lowco2",
+      "management": {},
+      "sites": "scandinavia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "scandinavia_recent_lowco2",
+      "management": {},
+      "sites": "scandinavia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "scandinavia_early_highco2",
+      "management": {},
+      "sites": "scandinavia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "scandinavia_recent_highco2",
+      "management": {},
+      "sites": "scandinavia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "scandinavia_sla",
+      "management": {},
+      "sites": "scandinavia",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "sla",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "scandinavia_k_latosa",
+      "management": {},
+      "sites": "scandinavia",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "k_latosa",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "scandinavia_twig0",
+      "management": {
+        "twig_removal": 0
+      },
+      "sites": "scandinavia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "scandinavia_twig1",
+      "management": {
+        "twig_removal": 1
+      },
+      "sites": "scandinavia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "iberia_early_lowco2",
+      "management": {},
+      "sites": "iberia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "iberia_recent_lowco2",
+      "management": {},
+      "sites": "iberia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "iberia_early_highco2",
+      "management": {},
+      "sites": "iberia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "iberia_recent_highco2",
+      "management": {},
+      "sites": "iberia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "iberia_sla",
+      "management": {},
+      "sites": "iberia",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "sla",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "iberia_k_latosa",
+      "management": {},
+      "sites": "iberia",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "k_latosa",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "iberia_twig0",
+      "management": {
+        "twig_removal": 0
+      },
+      "sites": "iberia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "iberia_twig1",
+      "management": {
+        "twig_removal": 1
+      },
+      "sites": "iberia"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "southern_chile_early_lowco2",
+      "management": {},
+      "sites": "southern_chile"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 1901
+      },
+      "id": "southern_chile_recent_lowco2",
+      "management": {},
+      "sites": "southern_chile"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 1921,
+        "window_start": 1901
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "southern_chile_early_highco2",
+      "management": {},
+      "sites": "southern_chile"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "southern_chile_recent_highco2",
+      "management": {},
+      "sites": "southern_chile"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "southern_chile_sla",
+      "management": {},
+      "sites": "southern_chile",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "sla",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "southern_chile_k_latosa",
+      "management": {},
+      "sites": "southern_chile",
+      "sweep": {
+        "multipliers": [
+          0.75,
+          1,
+          1.25
+        ],
+        "parameter": "k_latosa",
+        "pfts": "NATURAL_TREE_PFTS"
+      }
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "southern_chile_twig0",
+      "management": {
+        "twig_removal": 0
+      },
+      "sites": "southern_chile"
+    },
+    {
+      "climate": {
+        "apply_from": 2001,
+        "mode": "recycle",
+        "window_end": 2020,
+        "window_start": 2000
+      },
+      "co2": {
+        "apply_from": 2001,
+        "mode": "fixed_year",
+        "reference_year": 2020
+      },
+      "id": "southern_chile_twig1",
+      "management": {
+        "twig_removal": 1
+      },
+      "sites": "southern_chile"
+    }
+  ],
+  "selection": [],
+  "selection_note": "Model-determined establishment from included PFTs; no regional planting selection. Climate establishment limits enforced. Density experiments omitted in natural mode.",
+  "stand": "Forest",
+  "validation": {
+    "fatal_log_patterns": [
+      "\\bFATAL\\b",
+      "mass balance error"
+    ],
+    "harvest_tolerance": 1e-08
+  },
+  "workspace": "../global-study-workspace",
+  "regeneration": "natural"
+}
