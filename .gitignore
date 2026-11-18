@@ -8,3 +8,22 @@ study-workspace/
 dist/
 
 .geo/
+
+# External LPJ-GUESS model sources, patches and build artifacts stay local.
+/model-fix/
+/european_applications/
+/lpj-guess/
+/lpj_guess/
+*.c
+*.cc
+*.cpp
+*.cxx
+*.h
+*.hpp
+*.hxx
+*.o
+*.obj
+*.exe
+/guess
+/build/
+/build_new/
