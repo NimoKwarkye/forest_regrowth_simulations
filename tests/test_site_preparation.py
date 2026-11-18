@@ -37,9 +37,11 @@ class PreparationTests(unittest.TestCase):
                  'site_preparation':{'source_gridlist':'grid.txt','source_landuse':'lu.txt','reference_year':2000,'rectangle_shape':[2,2],'grid_resolution_degrees':[1,1],'outside_source_years':'hold_boundary','zones':{'zone':{'longitude':[-1,3],'latitude':[-1,3]}}}}
             atomic_json(root/'study.json',cfg);out=prepare(root/'study.json')
             with (out/'landuse_forest1.txt').open() as f:
-                rows=list(csv.DictReader(f,delimiter=' '))
+                reader=csv.DictReader(f,delimiter=' ')
+                self.assertEqual(reader.fieldnames,['Lon','Lat','Year','FOREST'])
+                rows=list(reader)
             self.assertEqual(len(rows),16)
-            self.assertTrue(all(float(r['FOREST'])==1 and float(r['NATURAL'])==0 for r in rows))
+            self.assertTrue(all(float(r['FOREST'])==1 and set(r)=={'Lon','Lat','Year','FOREST'} for r in rows))
             with (out/'landuse_dynamic.txt').open() as f:rows=list(csv.DictReader(f,delimiter=' '))
             self.assertTrue(all(float(r['FOREST'])==.6 for r in rows if r['Year']=='2003'))
             ready=json.loads((out/'study.json').read_text());self.assertEqual(ready['cluster'],'../cluster.json');self.assertEqual(ready['model_source'],'/bg/home/model')
@@ -48,7 +50,7 @@ class PreparationTests(unittest.TestCase):
 
 class PreparedInputTests(Fixture):
     def test_forest_and_dynamic_files_reach_generated_instructions(self):
-        write_text(self.root/'forest.txt','Lon Lat Year FOREST NATURAL\n10 50 1904 1 0\n')
+        write_text(self.root/'forest.txt','Lon Lat Year FOREST\n10 50 1904 1\n')
         write_text(self.root/'dynamic.txt','Lon Lat Year FOREST NATURAL\n10 50 1904 .4 .6\n')
         self.settings['prepared_landuse']={'forest_only':'forest.txt','dynamic':'dynamic.txt'}
         self.settings['scenarios']=[{'id':'forest'},{'id':'changing','mode':'landuse_change'}]
@@ -57,7 +59,7 @@ class PreparedInputTests(Fixture):
         for path in paths:
             m=json.loads(Path(path).read_text());ins=Instructions(Path(m['work_dir'])/'guess.ins')
             source=Path(ins.params['file_lu'][0]);self.assertEqual(source.parent,Path(m['work_dir'])/'inputs')
-            self.assertIn('1 0' if m['experiment']['id']=='forest' else '.4 .6',source.read_text())
+            self.assertEqual(source.read_text(),(self.root/('forest.txt' if m['experiment']['id']=='forest' else 'dynamic.txt')).read_text())
 
 class NaturalRegenerationTests(Fixture):
     def test_natural_management_reaches_instructions(self):

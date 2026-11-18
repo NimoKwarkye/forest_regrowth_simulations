@@ -581,5 +581,95 @@
         "management"
       ]
     }
+  },
+  "site_preparation": {
+    "source_gridlist": "/absolute/path/to/gridlist_hurtt_RNDM_midpoint_S0_state_ok.txt",
+    "source_landuse": "/absolute/path/to/net_lu_hilda_global.txt",
+    "output_directory": "prepared-sites",
+    "reference_year": 2000,
+    "minimum_forest_fraction": 0.3,
+    "grid_resolution_degrees": [
+      0.5,
+      0.5
+    ],
+    "outside_source_years": "hold_boundary",
+    "include_source_history": true,
+    "zone_management": true,
+    "zones": {
+      "amazon": {
+        "longitude": [
+          -70,
+          -50
+        ],
+        "latitude": [
+          -10,
+          0
+        ],
+        "description": "Humid tropical Amazon",
+        "weighting": "cell_area"
+      },
+      "se_us": {
+        "longitude": [
+          -90,
+          -75
+        ],
+        "latitude": [
+          28,
+          36
+        ],
+        "description": "Humid subtropical southeastern USA",
+        "weighting": "cell_area"
+      },
+      "central_europe": {
+        "longitude": [
+          5,
+          20
+        ],
+        "latitude": [
+          45,
+          52
+        ],
+        "description": "Temperate central Europe",
+        "weighting": "cell_area"
+      },
+      "scandinavia": {
+        "longitude": [
+          10,
+          30
+        ],
+        "latitude": [
+          58,
+          67
+        ],
+        "description": "Boreal northern Europe (Fennoscandia)",
+        "weighting": "cell_area"
+      },
+      "iberia": {
+        "longitude": [
+          -10,
+          3
+        ],
+        "latitude": [
+          36,
+          43
+        ],
+        "description": "Mediterranean and transitional Iberia",
+        "weighting": "cell_area"
+      },
+      "southern_chile": {
+        "longitude": [
+          -75,
+          -70
+        ],
+        "latitude": [
+          -45,
+          -38
+        ],
+        "description": "Cool oceanic southern Chile",
+        "weighting": "cell_area"
+      }
+    },
+    "selection_mode": "rectangle_minimum_points",
+    "minimum_points_per_zone": 50
   }
 }

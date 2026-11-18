@@ -73,7 +73,7 @@ describes the separate 0.5-degree, 1951-2000 climate classification product.
 - selected_sites.csv: coordinates, source FOREST fractions and zone names.
 - cell_areas.csv: full spherical grid-cell areas in m2, for regional weights; no
   ocean/land-mask area correction is inferred.
-- landuse_forest1.txt: FOREST=1 and every other land-cover fraction=0.
+- landuse_forest1.txt: only Lon, Lat, Year and FOREST columns, with FOREST=1.
 - landuse_dynamic.txt: source fractions at the selected sites, with the explicit
   extension policy below.
 - extended_years.csv: exact simulation-year/source-year mapping outside coverage.
@@ -131,7 +131,7 @@ products. Other supplied forcings, such as nitrogen deposition, still need valid
 coverage or their own model extension controls through the requested end year.
 
 The generated grid and land-use files are checked for unique points, region membership,
-and FOREST=1 with all other fractions zero. The supplied run contains 96,600 site-year
+and exactly Lon, Lat, Year and FOREST columns, with FOREST=1. The supplied run contains 96,600 site-year
 records in each land-use file (1800-2121). Focused tests cover selection with gaps,
 minimum counts, dates, fractions, input staging and regressions. No simulation or
 Slurm job was run. prepared-sites/clusters.png shows the actual selected points and

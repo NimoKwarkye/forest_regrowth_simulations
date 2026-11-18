@@ -162,8 +162,7 @@ def prepare(study_path,source_gridlist=None,source_landuse=None,output_dir=None)
         if year in history[point]:raise ConfigError(f'Duplicate land-use record: {point}, {year}')
         history[point][year]=fractions(fields,header)
     start=min(first,min(source_years)) if spec.get('include_source_history',True) else first
-    dynamic=[' '.join(header)];pure=[' '.join(header)];filled=[]
-    pure_values=[1. if name=='FOREST' else 0. for name in header[3:]]
+    dynamic=[' '.join(header)];pure=['Lon Lat Year FOREST'];filled=[]
     for point in sorted(used):
         available=history[point]
         if not available:raise ConfigError(f'Missing selected site: {point}')
@@ -177,7 +176,7 @@ def prepare(study_path,source_gridlist=None,source_landuse=None,output_dir=None)
                 filled.append((point[0],point[1],year,source_year))
             prefix=f'{point[0]:g} {point[1]:g} {year}'
             dynamic.append(prefix+' '+' '.join(f'{v:.12g}' for v in available[source_year]))
-            pure.append(prefix+' '+' '.join(f'{v:g}' for v in pure_values))
+            pure.append(prefix+' 1')
     out.mkdir(parents=True,exist_ok=True)
     write_text(out/'gridlist.txt',''.join(f'{x:g} {y:g}\n' for x,y in sorted(used)))
     write_text(out/'landuse_dynamic.txt','\n'.join(dynamic)+'\n')

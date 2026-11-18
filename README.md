@@ -11,16 +11,22 @@ cluster pilot before scientific use. See [verification](docs/VERIFICATION.md).
 
 ## Installation on the cluster
 
-Copy this project to a stable shared directory visible to compute nodes.
-Use Python 3.10 or newer:
+Clone this project into a stable shared directory visible to compute nodes.
+Use Python 3.10 or newer and have `uv` available on your PATH. From the project
+directory, create the environment and install dependencies with `uv`:
 
 ```bash
-python3 -m venv .venv
+uv venv --python python3 .venv
+uv pip install --python .venv/bin/python -r requirements.txt
 source .venv/bin/activate
-python -m pip install -r requirements.txt
 python regrowth.py --help
 python -m unittest discover -s tests -v
 ```
+
+For the launcher, `python3 install.py` performs the environment creation and
+dependency installation using `uv` automatically; the manual setup above is an
+alternative. See [installation and Git updates](docs/INSTALLATION.md). Set the
+`python` field in `cluster.json` to the absolute path of `.venv/bin/python`.
 
 Core generation, collection and scheduler control use the Python standard library.
 PyYAML enables YAML configurations; Matplotlib generates PNG/PDF figures. JSON is

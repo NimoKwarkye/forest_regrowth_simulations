@@ -15,3 +15,19 @@ Use absolute cluster paths for shared inputs/executables and compute-node-visibl
 virtual-environment Python. No environmental input data are bundled here.
 
 - `study-forcing.json`: three forcing treatments using the patched cfx executable; see docs/FORCING_EXPERIMENT.md.
+
+- `study-scenarios.json`: includes `site_preparation` with six geographic search
+  regions, a minimum of 50 forest-rich points per region, and gaps allowed within
+  selected rectangles. Set `source_gridlist` and `source_landuse` to your cluster
+  input files before preparing sites. Existing scenario and regeneration settings
+  are retained; this example still uses explicit planting.
+
+```bash
+regrowth prepare-sites --study /path/to/examples/study-scenarios.json
+regrowth validate --study /path/to/examples/prepared-sites/study.json
+```
+
+The generated `prepared-sites` directory is next to the source JSON by default.
+Use its `study.json` for simulation commands; it points to the selected gridlist and
+prepared land-use files. The selection uses FOREST >= 0.3 in 2000. Land-use years
+beyond source coverage use the explicitly configured `hold_boundary` policy.
