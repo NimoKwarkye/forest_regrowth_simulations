@@ -3,11 +3,13 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+import subprocess
+from unittest.mock import Mock
 from prepare_sites import prepare,select_rectangle,select_cluster
 from test_tool import Fixture
-from lpjregrowth.config import atomic_json,write_text
+from lpjregrowth.config import atomic_json,write_text,digest
 from lpjregrowth.instructions import Instructions
-from lpjregrowth.workflow import prepare as prepare_jobs
+from lpjregrowth.workflow import prepare as prepare_jobs, submit_execution
 
 class PreparationTests(unittest.TestCase):
     def test_contiguous_rectangle_not_scattered_high_values(self):
@@ -60,6 +62,10 @@ class PreparedInputTests(Fixture):
             m=json.loads(Path(path).read_text());ins=Instructions(Path(m['work_dir'])/'guess.ins')
             source=Path(ins.params['file_lu'][0]);self.assertEqual(source.parent,Path(m['work_dir'])/'inputs')
             self.assertEqual(source.read_text(),(self.root/('forest.txt' if m['experiment']['id']=='forest' else 'dynamic.txt')).read_text())
+            self.assertEqual(m['main_sha256'],digest(Path(m['work_dir'])/'guess.ins'))
+        runner=Mock(side_effect=[subprocess.CompletedProcess([],0,'101\n',''),subprocess.CompletedProcess([],0,'102\n','')])
+        self.assertEqual(submit_execution(paths[0],runner)['simulation_job'],'101')
+        self.assertEqual(runner.call_count,2)
 
 class NaturalRegenerationTests(Fixture):
     def test_natural_management_reaches_instructions(self):

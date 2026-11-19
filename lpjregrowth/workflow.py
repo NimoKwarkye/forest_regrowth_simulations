@@ -159,6 +159,9 @@ def prepare(study, ids=None, retry=False):
                     'rank_sites': [[[float(x.split()[0]),float(x.split()[1])] for x in chunk] for chunk in chunks],
                     'first_year': study.first_year, 'last_year': study.last_year, 'cut_year': study.cut_year,
                     'outputs': study.outputs, 'executable_sha256': digest(work / 'guess'),
+                    # Input paths were rewritten after generation; hash the final execution files.
+                    'main_sha256': digest(work / 'guess.ins'),
+                    'grid_sha256': digest(work / 'gridlist.txt'),
                     'source_binary_relationship': 'User review required; checksum does not establish source provenance.',
                     'python': str(study.cluster_path_value('python')),
                     'input_files': [{'parameter':name,'path':str(resolve_path(value,parent)),
