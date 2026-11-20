@@ -210,3 +210,27 @@ figures are retained, so use that manifest to identify current outputs.
 These additions are verified with synthetic fixture outputs. A small cluster pilot
 is still needed to verify real land-use formats, model reader availability, PFT
 behavior and physical output definitions before a large production submission.
+
+## Regional comparison plots
+
+Scenario plots use regions as the observational units. Regional time series,
+differences, cross-region comparisons and allometry response curves all use
+regional_summary.csv. Individual grid-cell curves are no longer generated;
+raw grid-cell CSVs remain available for diagnostics. plot_sites and plot_max_sites
+no longer select individual curves in this scenario workflow.
+
+Use weighting="cell_area" in each region and supply analysis.cell_areas (area_m2)
+or analysis.grid_resolution_degrees. The mean is sum(value * cell area) / sum(cell
+area). AGB remains kg dry matter m-2 when configured in those units. Rectangle gaps
+are excluded: the denominator is the sampled cells' area, not the rectangle's full
+area. These are sampled-region means, not estimates for unsimulated locations.
+For stand-area outputs under changing land cover, use the existing forest_area
+weighting and explicit area_fraction_variable; full cell-area weights alone do not
+account for changing forest fractions. In FOREST=1 experiments the two areas agree.
+
+Region colors are consistent across cross-region panels. Scenario colors remain
+consistent across regional scenario panels. Plot metadata records region colors;
+obsolete PNG/PDF files listed in the previous plot manifest are removed on replot.
+User files not listed in that manifest are retained. Empty regions retain zero
+summaries and zero weight. No model rerun is required: rerun analyze then plot using
+the same study and archived executions.

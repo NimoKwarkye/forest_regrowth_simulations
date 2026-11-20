@@ -172,10 +172,32 @@ def collect(path):
         for spec in manifest['outputs']:
             if Path(spec['file']) not in inventories[0]:
                 raise ConfigError(f'Missing required output: {spec["file"]}')
+        # An optional diagnostic may be inactive on some ranks. Do not publish
+        # a partial merged table; preserve all its rank files and report it.
+        required = {Path(spec['file']) for spec in manifest['outputs']}
+        optional_incomplete = []
+        merge_files = []
+        for relative in sorted(inventories[0]):
+            empty_ranks = []
+            if relative not in required:
+                for run in runs:
+                    with (run / relative).open(encoding='utf-8-sig') as source:
+                        if not any(line.strip() for line in source):
+                            empty_ranks.append(run.name)
+            if empty_ranks:
+                optional_incomplete.append({'file': relative.as_posix(), 'empty_ranks': empty_ranks,
+                                            'action': 'Not merged; original files retained under optional_outputs/ranks'})
+                for run in runs:
+                    dest = partial / 'optional_outputs' / 'ranks' / run.name / relative
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    with (run / relative).open('rb') as source, gzip.open(str(dest)+'.gz','wb') as target:
+                        shutil.copyfileobj(source,target)
+            else:
+                merge_files.append(relative)
         from concurrent.futures import ThreadPoolExecutor
         with ThreadPoolExecutor(max_workers=int(manifest['cluster']['finish_tasks'])) as pool:
             futures=[]
-            for relative in sorted(inventories[0]):
+            for relative in merge_files:
                 dest = partial / relative.with_suffix(relative.suffix + '.gz')
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 futures.append(pool.submit(merge_table,[run / relative for run in runs],dest))
@@ -216,6 +238,7 @@ def collect(path):
             if source.is_file() and (source.name.startswith(('guess_x.', 'finish_')) or source.name.endswith('-submission.json')):
                 shutil.copy2(source, partial / source.name)
         atomic_json(partial / 'validation.json', {'passed': True, 'checks': checks, 'log_counts': summaries,
+                    'optional_incomplete_outputs': optional_incomplete,
                     'limitations': ['Positive post-cut biomass is checked; exact planting density and species filtering require pilot inspection.',
                                     'Input ecology and source/executable correspondence depend on recorded user reviews.']})
         hashes = {p.relative_to(partial).as_posix(): digest(p) for p in partial.rglob('*') if p.is_file()}

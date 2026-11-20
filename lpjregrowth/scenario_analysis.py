@@ -265,48 +265,57 @@ def plot(study):
     draw(diff,['comparison','region','variable'],'difference','Difference ')
     draw(diff,['comparison','region','variable'],'percent_difference','Percent ')
     options=study.config.get('analysis',{})
-    plot_sites={tuple(map(float,x)) for x in options.get('plot_sites',[r.split()[:2] for r in study.records[:int(options.get('plot_max_sites',10))]])}
-    with (root/'timeseries.csv').open() as f:rows=[r for r in csv.DictReader(f) if (float(r['longitude']),float(r['latitude'])) in plot_sites]
-    for name,spec in meta['comparisons'].items():
-        selected=[]
-        for r in rows:
-            if r['experiment_id'] in spec['experiments']:
-                r=dict(r);r['axis']=spec.get('axis','calendar_year');r['time']=r[r['axis']]
-                if r['axis']=='calendar_year' or int(r['time'])>=0:selected.append(r)
-        draw(selected,['longitude','latitude','variable'],'value',name+' site ')
-    # Same treatment across sites, using a stable categorical site palette.
+    # Every plotted observation is now an aggregated region, never a grid cell.
     from .plotstyle import component_palette
-    sitecolors=component_palette([f'{x},{y}' for x,y in sorted(plot_sites)],options.get('plot_colormap','jet'))
+    regioncolors=component_palette(sorted({r['region'] for r in regional}),options.get('plot_colormap','jet'))
     groups=defaultdict(list)
-    for r in rows:groups[r['experiment_id'],r['variable']].append(r)
-    for (eid,var),group in groups.items():
+    for r in regional:
+        groups[r['comparison'],r['experiment_id'],r['variable'],r['axis']].append(r)
+    for (comparison,eid,var,axis),group in groups.items():
         fig,ax=plt.subplots(figsize=(9,5))
-        for x,y in sorted(plot_sites):
-            series=sorted([r for r in group if (float(r['longitude']),float(r['latitude']))==(x,y)],key=lambda r:int(r['calendar_year']))
-            if series:ax.plot([int(r['calendar_year']) for r in series],[float(r['value']) for r in series],label=f'{x},{y}',color=sitecolors[f'{x},{y}'])
-        ax.set(xlabel='Calendar year',ylabel=group[0]['unit'],title=f'{eid}: {var} across sites');ax.legend(fontsize=8);ax.grid(alpha=.2);save(fig,f'cross_site_{eid}_{var}')
-    # Parameter responses at configured ages, with one panel per site/variable.
-    with (root/'selected_ages.csv').open() as f:age_rows=list(csv.DictReader(f))
+        for region in sorted({r['region'] for r in group}):
+            series=sorted((r for r in group if r['region']==region),key=lambda r:float(r['time']))
+            ax.plot([float(r['time']) for r in series],[float(r['mean']) for r in series],label=region,color=regioncolors[region])
+        ax.set(xlabel=axis.replace('_',' '),ylabel=group[0]['unit'],title=f'{labels[eid]}: {var} across regions')
+        ax.legend(fontsize=8);ax.grid(alpha=.2);save(fig,f'cross_region_{comparison}_{eid}_{var}')
+    # Parameter responses use the same regional means as the time-series plots.
     families=defaultdict(dict)
     for e in study.experiments:
         if 'sweep_family' in e['scenario']:families[e['scenario']['sweep_family']][e['id']]=e['scenario']['sweep_value']
+    cutyears={e['id']:child(study,e).cut_year for e in study.experiments}
+    wanted=set(options.get('summary_ages',[0,20,40,60,80,100,120]))
     for family,values in families.items():
-        grouped=defaultdict(list)
-        for r in age_rows:
-            if r['experiment_id'] in values and (float(r['longitude']),float(r['latitude'])) in plot_sites:grouped[r['longitude'],r['latitude'],r['variable']].append(r)
-        for (lon,lat,var),group in grouped.items():
-            fig,ax=plt.subplots(figsize=(9,5))
-            ages=sorted({int(r['years_since_cut']) for r in group})
+        grouped=defaultdict(dict)
+        for r in regional:
+            eid=r['experiment_id']
+            if eid not in values:continue
+            age=int(r['time'])-(cutyears[eid] if r['axis']=='calendar_year' else 0)
+            if age in wanted:grouped[r['region'],r['variable']][eid,age]=(r,age)
+        for (region,var),items in grouped.items():
+            group=list(items.values());fig,ax=plt.subplots(figsize=(9,5))
+            ages=sorted({age for r,age in group})
             ac=component_palette([str(a) for a in ages],options.get('plot_colormap','jet'))
             for age in ages:
-                series=sorted([r for r in group if int(r['years_since_cut'])==age],key=lambda r:values[r['experiment_id']])
-                ax.plot([values[r['experiment_id']] for r in series],[float(r['value']) for r in series],marker='o',label=f'Age {age}',color=ac[str(age)])
-            ax.set(xlabel='Sweep value (multiplier or absolute, as configured)',ylabel=group[0]['unit'],title=f'{family}: {var} at {lon}, {lat}');ax.legend(fontsize=8);ax.grid(alpha=.2);save(fig,f'response_{family}_{lon}_{lat}_{var}')
+                series=sorted([r for r,a in group if a==age],key=lambda r:values[r['experiment_id']])
+                ax.plot([values[r['experiment_id']] for r in series],[float(r['mean']) for r in series],marker='o',label=f'Age {age}',color=ac[str(age)])
+            ax.set(xlabel='Sweep value (multiplier or absolute, as configured)',ylabel=group[0][0]['unit'],title=f'{family}: {var} in {region}')
+            ax.legend(fontsize=8);ax.grid(alpha=.2);save(fig,f'response_{family}_{region}_{var}')
     fig,ax=plt.subplots(figsize=(10,5))
     regions=json.loads((root/'region_sites.json').read_text())
     for name,points in regions.items():
         if name=='all' and len(regions)>1:continue
-        ax.scatter([p[0] for p in points],[p[1] for p in points],s=18,label=name,alpha=.7)
+        ax.scatter([p[0] for p in points],[p[1] for p in points],s=18,label=name,alpha=.7,color=regioncolors.get(name))
     ax.set(xlabel='Longitude',ylabel='Latitude',title='Selected grid-cell centres by region');ax.legend();ax.grid(alpha=.2);save(fig,'region_sites')
-    atomic_json(dest/'plot_scope.json',{'files':files,'experiment_colors':colors,'site_colors':sitecolors,'individual_sites':sorted(plot_sites),'scenario_signature':signature(study)})
+    # Remove only obsolete plots recorded as owned by the previous plotting run.
+    scope=dest/'plot_scope.json'
+    if scope.exists():
+        previous=json.loads(scope.read_text())
+        current={Path(f).resolve() for f in files}
+        for old in previous.get('files',[]):
+            path=Path(old).resolve()
+            if path.parent==dest.resolve() and path.suffix in ('.png','.pdf') and path not in current:
+                path.unlink(missing_ok=True)
+    atomic_json(scope,{'files':files,'experiment_colors':colors,'region_colors':regioncolors,
+        'individual_sites':[],'aggregation':'Regional means using configured area weights; selected cells only, excluding rectangle gaps.',
+        'scenario_signature':signature(study)})
     return files

@@ -214,6 +214,25 @@ class WorkflowTests(Fixture):
 
 
 class CollectionTests(Fixture):
+    def test_empty_optional_output_is_preserved_without_partial_merge(self):
+        path=self.prepared(['baseline'])[0];m=self.synthetic_outputs(path)
+        work=Path(m['work_dir'])
+        write_text(work/'run1/aaet_active.out','Lon Lat Year AET\n10 50 1904 1\n')
+        write_text(work/'run2/aaet_active.out','  \n')
+        archive=Path(collect(path));verify_archive(archive)
+        self.assertFalse((archive/'aaet_active.out.gz').exists())
+        report=json.loads((archive/'validation.json').read_text())
+        self.assertEqual(report['optional_incomplete_outputs'][0]['empty_ranks'],['run2'])
+        with gzip.open(archive/'optional_outputs/ranks/run1/aaet_active.out.gz','rt') as f:
+            self.assertIn('10 50 1904 1',f.read())
+
+    def test_empty_required_output_still_fails(self):
+        path=self.prepared(['baseline'])[0];m=self.synthetic_outputs(path)
+        write_text(Path(m['work_dir'])/'run2/agb.out','')
+        with self.assertRaisesRegex(ConfigError,'Empty output file'):
+            collect(path)
+        self.assertFalse(Path(m['archive_dir']).exists())
+
     def test_complete_collection_analysis(self):
         paths=self.prepared()
         for path in paths:

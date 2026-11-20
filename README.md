@@ -362,3 +362,24 @@ Rectangular forest-rich site selection and land-use preparation: see [docs/SITE_
 See [installation and Git updates](docs/INSTALLATION.md). Run `python3 install.py` once
 on the cluster, then use `regrowth validate --study /path/to/study.json` and
 `regrowth update`. Study configurations remain outside the tool checkout.
+
+## Regional scenario plots
+
+Scenario plots aggregate grid cells into the configured regions before drawing
+curves. Use `weighting: "cell_area"` for each region and provide `analysis.cell_areas`
+or `analysis.grid_resolution_degrees`. Regional AGB is the area-weighted mean in
+the configured units (e.g. kg dry matter m-2), not the sum of cell densities.
+Only selected cells contribute area; gaps in the rectangle do not.
+
+Time-series, differences and parameter-response plots use those regional means.
+Cross-region plots compare the same experiment between regions. Individual-cell
+CSV data remain available, but individual-cell plots are no longer generated for
+scenario studies. Replotting removes obsolete plots listed in the previous plot
+manifest. See [regional details](docs/scenarios.md#regional-comparison-plots).
+
+```bash
+regrowth analyze --study /path/to/study-scenario.json
+regrowth plot --study /path/to/study-scenario.json
+```
+
+No model rerun is needed for this plotting change.

@@ -76,9 +76,34 @@ class ScenarioTests(Fixture):
         self.assertTrue(rows);self.assertTrue(all(int(r['sites'])==2 for r in rows))
         expected=6371008.8**2*math.radians(1)*sum(math.sin(math.radians(y+.5))-math.sin(math.radians(y-.5)) for y in (50,51))
         self.assertAlmostEqual(float(rows[0]['weight_sum']),expected,places=3)
+        obsolete=self.study.root/'figures/cross_site_old.png'
+        write_text(obsolete,'old plot')
+        atomic_json(obsolete.parent/'plot_scope.json',{'files':[str(obsolete)]})
         paths=plot(self.study)
-        self.assertTrue(any('cross_site' in p for p in paths))
+        self.assertFalse(obsolete.exists())
+        self.assertTrue(any('cross_region' in p for p in paths))
+        self.assertFalse(any('cross_site' in p or '_site_' in Path(p).name for p in paths))
+        scope=json.loads((self.study.root/'figures/plot_scope.json').read_text())
+        self.assertEqual(scope['individual_sites'],[])
         self.assertTrue(any('Regional' in p for p in paths))
+
+    def test_regional_mean_uses_cell_area_not_cell_count(self):
+        self.setup_scenarios()
+        write_text(self.root/'areas.csv','longitude,latitude,area_m2\n10,50,1\n11,51,3\n')
+        self.settings['analysis']['cell_areas']='areas.csv'
+        self.save_settings()
+        for path in self.prepared():
+            m=self.synthetic_outputs(path)
+            output=Path(m['work_dir'])/'run2/agb.out'
+            write_text(output,output.read_text().replace('1906 1.1','1906 3.1'))
+            collect(path)
+        analyze(self.study)
+        with (self.study.root/'results/regional_summary.csv').open() as f:
+            rows=[r for r in csv.DictReader(f) if r['variable']=='agb' and r['time']=='1906']
+        self.assertEqual(len(rows),2)
+        for r in rows:
+            self.assertAlmostEqual(float(r['mean']),2.6)
+            self.assertEqual(float(r['weight_sum']),4)
 
     def test_landuse_mode_allows_zero_biomass_and_later_harvest(self):
         self.settings['scenarios']=[{'id':'land','mode':'landuse_change'}]
